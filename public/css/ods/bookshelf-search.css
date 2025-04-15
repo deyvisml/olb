@@ -1,0 +1,35 @@
+.olb-search-result {
+    margin: 18px 0 0;
+    min-height: 522px;
+}
+.olb-search-result .expired .olb-book-shelf-bg {
+    background: url("../../images/ods/olb-shelf-expired.svg") repeat;
+}
+.olb-search-result .expired .olb-book-collection-bar {
+    background-color: #696969;
+    padding-top: 8px;
+}
+.olb-search-result .expired .olb-book-collection-bar:hover,
+.olb-search-result .expired .olb-book-collection-bar:active {
+    background-color: #555555;
+}
+.olb-search-result .expired .olb-book-container {
+    background-color: #efefef;
+}
+.olb-search-result .expired .olb-book-container img {
+    color: black;
+}
+.olb-search-result .expired .olb-diary-book-text-progress {
+    color: #696969;
+}
+.olb-search-result .expired .olb-diary-progress-bar {
+    display: none;
+}
+.olb-search-result .expired .olb-diary-book-cover-finished {
+    background-image: none;
+}
+.olb-search-result .expired img {
+    opacity: 0.5;
+    filter: grayscale(100%);
+    -webkit-filter: grayscale(100%);
+}

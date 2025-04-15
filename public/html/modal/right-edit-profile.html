@@ -1,0 +1,76 @@
+<div class="right-panel-container">
+  <div class="panel-header-fixed">
+    <div class="row panel-close">
+      <div class="col-md-12">
+        <a href="#0" class="right-panel-close link-close" data-dismiss="modal">Close</a>
+      </div>
+    </div>
+    <div class="ces-panel-header-container">
+      <div class="col-md-12 col-test">
+        <div class="ces-page-header">
+          <div class="ces-page-header-icon ces-ellipse-medium ces-profile-flat table-icon">
+            <span id="user-profile-initial"></span>
+          </div>
+          <div class="ces-page-title-text">
+            <div class="ces-page-title"><h1 id="user-profile-fullname"></h1></div>
+            <div class="ces-page-subtext"><p id="user-profile-email"></p></div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="panel-content-container">
+    <div class="row">
+      <div class="col-sm-12">
+        <div class="panel-content">
+          <form id="submit-form-edit-profile">
+            <div class="row">
+              <div class="col-md-12">
+                <div class="form-group">
+                  <label htmlFor="first-name">First name</label>
+                  <div class="validation-none">
+                    <input id="user-profile-firstname" type="text" class="form-control" name="firstName"/>
+                  </div>
+                  <ul class="input-message input-message-error firstname-error">
+                    <li></li>
+                  </ul>
+                </div>
+                <div class="form-group">
+                  <label htmlFor="last-name">Last name</label>
+                  <div class="validation-none">
+                    <input id="user-profile-lastname" type="text" class="form-control" name="lastName"/>
+                  </div>
+                  <ul class="input-message input-message-error lastName-error">
+                    <li></li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+          </form>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="panel-footer-fixed">
+    <div class="row right-panel-buttons">
+      <div class="col-md-12">
+        Our <a onclick="openBrowser('https://global.oup.com/privacy');">privacy policy <div class="link-img"></div>
+      </a> sets out how Oxford University Press handles your personal information, and your rights to object to your
+        personal information being used for marketing to you or being processed as part of our business activities.
+        <br><br>
+      </div>
+      <div class="col-md-12">
+        <label>Actions:</label>
+        <button id='change-username-password' type="button" class="btn btn-action link btn-block change-content">Change my username or password</button>
+        <button type="button" id="submit-edit-profile" class="btn btn-primary btn-block" disabled>Save</button>
+      </div>
+    </div>
+  </div>
+</div>
+<script>
+    require('../js/ods-renderer/view/auth/edit-profile');
+
+    if (onEditProfilePanelLoaded && typeof onEditProfilePanelLoaded === 'function') {
+        onEditProfilePanelLoaded();
+    }
+</script>

@@ -1,0 +1,24 @@
+{
+  "OUP_HUB_BASE_URL": "https://go.oup.com",
+  "CES_BASE_URL": "https://account.oup.com",
+  "CES_COGNITO_POOL_ID": "eu-west-1:25553297-cf65-4dcf-8f9a-100430db0664",
+  "CES_TR_PANEL_URL": "https://account.oup.com/premium/resources",
+  "CES_URL_REGISTER": "https://account.oup.com/register-choice",
+  "CES_URL_EDIT_PROFILE": "https://account.oup.com/myProfile/myClasses/editUser",
+
+  "AUTH0_IDP_URL": "https://id.oup.com",
+  "AUTH0_AUDIENCE": "https://prod-oup.eu.auth0.com/api/v2/",
+  "AUTH0_GATEWAY_PATH": "edu",
+  "AUTH0_CALLBACK_URL": "olb://id.oup.com/ods/olb/callback",
+  "INTEGRATION_CLIENT_ID": "HJ5uk5aEjz590ZnNlj41OtmCQ3psgOQp",
+
+  "OLB_MASTER_PRODUCT": "aa743b33-af97-4300-b29a-2333a0668089",
+  "OLB_SAMPLE_PRODUCT": "05192435-3321-4086-a3fe-b7fc41de9375",
+  "OLB_BOOKSHELF": "https://www.oxfordlearnersbookshelf.com/",
+
+  "OLB_RECAPTCHA_SITE_KEY": "6LfBOnAqAAAAAAZwGtsWtQkler72Oh8GavsbYiW_",
+
+  "OLB_MIDDLEWARE_HOSTNAME": "https://api.oxfordlearnersbookshelf.com",
+
+  "ODS_UPDATE_PATH_FRAGMENT": "prod"
+}

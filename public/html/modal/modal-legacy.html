@@ -1,0 +1,70 @@
+<div class="modal-dialog modal-lg">
+  <div class="modal-content">
+    <div class="modal-body-carousel">
+      <div class="modal-header">
+        <div class="col-md-12">
+          <a class="oup-branding" href="#"></a>
+        </div>
+        <div class="panel-close">
+          <div class="col-md-12">
+            <button type="button" class="btn btn-default btn-nav link-close" data-dismiss="modal" onclick="signout();">Close</button>
+          </div>
+        </div>
+      </div>
+      <div class="modal-body" style="text-align: left;">
+        <div class="row">
+          <div class="col-md-12">
+            <h1 class="register-title">Hi<span class="success-first-name"></span>, please update your account</h1>
+            <p class="lead">Please agree to the terms and conditions</p>
+          </div>
+        </div>
+        <div class="row">
+          <div class="col-md-9">
+            <div class="ces-card olb-card-top">
+              <h3 class="ces-card-header olb-card">My Profile</h3>
+              <div class="row">
+                <div class="col-md-12">
+                  <form action="" id="submit-legacy-signin">
+                    <div class="form-group">
+                      <label>Email address:</label>
+                      <div class="validation-none">
+                        <input type="text" id="userName" name="userName" class="form-control" autocomplete="false" placeholder="Please enter email address">
+                      </div>
+                      <ul class="input-message input-message-error email-error">
+                        <li>Please enter your email address</li>
+                      </ul>
+                    </div>
+                    <div class="form-group">
+                      <label>Terms and Conditions:</label>
+                      <div>
+                        <input type="checkbox" name="toc" id="toc" class="checkbox-input" style="display: none;"/>
+                        <label for="toc" class="checkbox-label"></label>
+                        <label class="checkbox-description checkbox-label checkbox-label-form" style="line-height: normal;">
+                          I agree to the <a onclick='openBrowser("https://elt.oup.com/olb_terms_and_conditions#terms_and_conditions");'>terms and conditions <div class="link-img"></div>
+                        </a> and, if I am 16 or under, I have obtained permission to agree from a parent or guardian.
+                          <br><br>
+                          Our <a onclick='openBrowser("https://global.oup.com/privacy");'>privacy policy <div class="link-img"></div>
+                        </a> sets out how Oxford University Press handles your personal
+                          information, and your rights to object to your personal information
+                          being used for marketing to you or being processed as part of our
+                          business activities.<br><br>We will only use your personal information for providing you with this service.
+                        </label>
+                      </div>
+                      <ul class="input-message input-message-error confirm-password-error">
+                        <li>Please agree to our Terms and Conditions</li>
+                      </ul>
+                    </div>
+                    <button type="submit" class="btn btn-primary">Update my account</button>
+                  </form>
+                </div>
+              </div>
+            </div><!-- End Panel-->
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+<script>
+    require('../js/ods-renderer/view/auth/register-legacy');
+</script>

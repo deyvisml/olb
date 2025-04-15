@@ -1,0 +1,97 @@
+<style>
+	.small-window {
+		background-color: #ffffff;
+		width: 450px;
+		max-height: 95%;
+		max-width: 100%;
+		overflow: auto;
+		-webkit-overflow-scrolling: touch;
+		position: relative;
+		margin: 0 auto;
+		z-index: 20;
+		color: #333333;
+	}
+	.small-window .small-head {
+		border-bottom: 1px solid #327f7f;
+		margin: 0 36px;
+	}
+	.small-window .small-title {
+		font-family: Georgia, serif;
+		font-weight: normal;
+		font-size: 1.8em;
+		text-align: left;
+		margin: 10px 0 0 0;
+		height: 40px;
+		line-height: 40px;
+	}
+	.small-window .desc-wrap {
+		margin: 0 36px;
+	}
+	.small-window .desc-wrap .sub-title {
+		margin: 10px 0 0 0;
+		font-weight: bold;
+		line-height: 20px;
+	}
+	.small-window .desc-wrap .desc {
+		margin: 0;
+		line-height: 20px;
+	}
+	.small-window .btn-wrap {
+		margin: 20px auto;
+		height: 50px;
+		width: 230px;
+	}
+	.small-window .btn-wrap .confirm-btn {
+		float: left;
+		width: 100px;
+		height: 35px;
+		background-color: #ff0000;
+		color: white;
+		font-weight: bold;
+		line-height: 35px;
+		text-align: center;
+		margin-right: 30px;
+		cursor: pointer;
+	}
+	.small-window .btn-wrap .confirm-btn:hover {
+		background-color: #a00001;
+		cursor: pointer;
+	}
+	.small-window .btn-wrap .cancel-btn {
+		float: left;
+		width: 100px;
+		height: 35px;
+		background-color: #549b9a;
+		color: white;
+		font-weight: bold;
+		line-height: 35px;
+		text-align: center;
+		cursor: pointer;
+	}
+	.small-window .btn-wrap .cancel-btn:hover {
+		background-color: #327f7f;
+		cursor: pointer;
+	}
+</style>
+<div class="modal-dialog">
+	<div class="modal-content">
+		<div class="modal-body-carousel">
+			<div id="modalContents" class="carousel slide modal-body modal-body-carousel" data-interval="false">
+				<section class="small-window">
+					<header class="small-head">
+						<div class="small-title">Delete this book?</div>
+					</header>
+					<div class='desc-wrap'>
+						<p class='sub-title'>Are you sure you want to delete this book from your computer?</p>
+						<p class='desc'>If you are not connected to the internet, your notes and answers will be lost.</p>
+					</div>
+					<div class='btn-wrap'>
+						<a href="javascript:" id="submit-delete-book" class='confirm-btn' data-dismiss="modal">Delete</a>
+						<a href="javascript:" class='cancel-btn' data-dismiss="modal">Cancel</a>
+						<div class="clear"></div>
+					</div>
+				</section>
+			</div>
+		</div>
+	</div>
+</div>

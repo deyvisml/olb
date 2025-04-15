@@ -1,0 +1,151 @@
+<style>
+  .modal-body.modal-body-carousel .panel-close {
+    position: relative;
+    width: 100%;
+    margin: 0;
+  }
+
+  .modal-body.modal-body-carousel .panel-close h1 {
+    position: relative;
+    width: 100%;
+    margin: 0;
+    padding: 0;
+    color: #111;
+    letter-spacing: .5px;
+    font-size: 1.35em;
+    font-weight:bold;
+    text-align: center;
+  }
+
+  .modal-body.modal-body-carousel .panel-close button {
+    position: absolute;
+    right: 0;
+    top: -3px;
+    width: 85px;
+    height: 30px;
+    background: inherit;
+    background-color: rgba(255, 255, 255, 1);
+    box-sizing: border-box;
+    border: 1px solid rgba(217, 217, 217, 1);
+    border-radius: 15px;
+    box-shadow: none;
+    color: #4776AE;
+    text-align: center;
+    font-size: 16px;
+  }
+
+  .onboarding-content {
+    margin: 15px calc(15px * 4);
+    width: calc(100% - (15px * 8));
+    font-size: 1.05em;
+    overflow-y: hidden;
+  }
+
+  .onboarding-image .carousel-caption {
+    padding: 0 15px 15px 0;
+    bottom: -11px;
+  }
+
+  #carousel-footer {
+    align-items: center;
+    justify-content: center;
+  }
+  #carousel-footer.last-slide .btn-back-navigation,
+  #carousel-footer.last-slide .btn-next-navigation,
+  #carousel-footer.last-slide .carousel-indicators {
+    display: none;
+  }
+  #carousel-footer .btn-got-it {
+    display: none;
+    width: 144px;
+  }
+  #carousel-footer.last-slide .btn-got-it {
+    display: block;
+  }
+</style>
+<div class="modal-dialog" role="document">
+  <div class="modal-content">
+    <div class="modal-body modal-body-carousel">
+
+      <div class="row panel-close">
+        <div class="col-md-12">
+          <h1>What's new?</h1>
+          <button type="button" class="btn btn-default btn-nav link-close" data-dismiss="modal">Close</button>
+        </div>
+      </div>
+
+      <!-- Carousel -->
+      <div id="onboarding-carousel" class="carousel slide" data-interval="false">
+
+        <div class="carousel-inner" role="listbox">
+          <div class="item active">
+            <div class="onboarding-image">
+              <img src="../images/whatsnew/5-11-0/banner-1.png">
+            </div>
+            <div class="onboarding-content">
+              <p><strong>Students</strong>: You can now submit answers and track <br>
+                your progress for some courses.</p>
+            </div>
+          </div>
+
+          <div class="item">
+            <div class="onboarding-image">
+              <img src="../images/whatsnew/5-11-0/banner-2.png">
+            </div>
+            <div class="onboarding-content">
+              <p><strong>Teachers</strong>: You can now track students'<br>
+                progress for some courses.<br>
+                Register your school to get started.</p>
+            </div>
+          </div>
+
+          <div class="item">
+            <div class="onboarding-image">
+              <img src="../images/whatsnew/5-11-0/banner-3.png">
+            </div>
+            <div class="onboarding-content">
+              <p><strong>Teachers</strong>: You can now hide the Answers menu on<br>
+                low resolution screens.</p>
+            </div>
+          </div>
+
+        </div>
+
+        <!-- Navigation -->
+        <div id="carousel-footer" class="carousel-navigation carousel-navigation-onboarding">
+          <button type="button" href="#onboarding-carousel" class="btn btn-default btn-with-icon btn-back btn-back-navigation" data-slide="prev"></button>
+          <!-- Indicators -->
+          <ol class="carousel-indicators">
+            <li data-target="#onboarding-carousel" data-slide-to="0" class="active"></li>
+            <li data-target="#onboarding-carousel" data-slide-to="1" class=""></li>
+            <li id="carousel-last-indicator" data-target="#onboarding-carousel" data-slide-to="2" class=""></li>
+          </ol>
+          <button type="button" href="#onboarding-carousel" class="btn btn-default btn-with-icon btn-back btn-next-navigation" data-slide="next"></button>
+
+          <!-- This button is only visible on the last slide -->
+          <button class="btn btn-primary btn-got-it" data-dismiss="modal">Got it!</button>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+<script>
+  // Below code block display the submit button on the last slide
+  // const observer = new MutationObserver((mutations) => {
+  //   for (const mutation of mutations) {
+  //     if (mutation?.target?.className === 'active') {
+  //       onLastSlideArrived();
+  //     }
+  //   }
+  // });
+  //
+  // // start observing the targetNode
+  // observer.observe(document.getElementById('carousel-last-indicator'), {
+  //   attributes: true,
+  //   attributeFilter: ['class']
+  // });
+  //
+  // function onLastSlideArrived() {
+  //   document.getElementById('carousel-footer').classList.add('last-slide');
+  // }
+</script>

@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Reading diary</title>
+    <link rel="shortcut icon" href="../images/ods/olb-favicon.ico" />
+    <link rel="icon" sizes="16x16 32x32 64x64" href="../images/ods/olb-favicon.ico" />
+    <link rel="stylesheet" type="text/css" href="../css/component/oup-hub.css"/>
+    <link rel="stylesheet" type="text/css" href="../css/lib/bootstrap.min.css"/>
+    <link rel="stylesheet" type="text/css" href="../css/lib/ces.css"/>
+    <link rel="stylesheet" type="text/css" href="../css/ods/commons.css"/>
+    <link rel="stylesheet" type="text/css" href="../css/ods/header.css"/>
+    <link rel="stylesheet" type="text/css" href="../css/ods/header-navigation.css"/>
+    <link rel="stylesheet" type="text/css" href="../css/ods/reading-dairy.css"/>
+    <link rel="stylesheet" type="text/css" href="../css/ods/reading-diary-status-box.css"/>
+</head>
+<body class="olb-reading-diary">
+<div class="olb-modal-bg"></div>
+<div id="modal" class="modal fade in" tabindex="-1" role="dialog" style="display: none;">
+</div>
+<div id="loading-background">
+    <div class="form-validation-loading validation-loading-lg"></div>
+</div>
+
+<!-- Skip to main content's href is set to the id of the entry element -->
+<a id='skip-to-main-content' href="#diary-arrow-left" class="sr-only sr-only-focusable">Skip to main content</a>
+
+<nav class="navbar navbar-default navbar-olb-4 navbar-fixed-top">
+    <bookshelf-header></bookshelf-header>
+    <header-navigation></header-navigation>
+</nav>
+
+<modal-placeholder></modal-placeholder>
+
+<div class="olb-diary-main-wrap">
+    <div class="olb-diary-main">
+        <section class="olb-diary-header">
+
+            <button id="diary-arrow-left"
+                    class="olb-diary-arrow left carousel-control-prev"
+                    href="#reading-diary-slide"
+                    data-slide="prev"
+                    title="Move to star-view"
+                    tabindex="0">
+                <img src="../images/ods/olb-home-arrow.svg" alt="Move to medal view"/>
+            </button>
+            <button id="diary-arrow-right"
+                    class="olb-diary-arrow right carousel-control-next"
+                    href="#reading-diary-slide"
+                    data-slide="next"
+                    title="Move to star-view"
+                    tabindex="0">
+                <img src="../images/ods/olb-home-arrow.svg" alt="Move to star view"/>
+            </button>
+
+            <!-- Title -->
+            <h2 class="olb-diary-splash-head">
+                <span id="diary-title"></span>
+            </h2>
+
+            <!-- Medal & Star views -->
+            <div id="reading-diary-slide" class="olb-diary-splash-wrap carousel slide" data-interval="false" data-ride="carousel">
+                <div id="olb-diary-splash-container" class="carousel-inner">
+                    <div class="olb-diary-splash olb-diary-splash-1 item carousel-item active">
+                        <div id="diary-medal" class="olb-diary-splash-1-arrows"></div>
+                    </div>
+                    <div class="olb-diary-splash olb-diary-splash-2 item carousel-item">
+                        <img id='diary-star-bg' src="../images/ods/olb-starchart-bg.jpg" alt="Night sky" />
+                        <svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" x="0px" y="0px"
+                             width="985px" height="504px" viewBox="0 0 985 504" enable-background="new 0 0 985 504" xml:space="preserve" class="olb-stars">
+                        </svg>
+                        <img id="diary-shooting-star-left" class="diary-shooting-star left" src="../images/ods/shooting_star.png" alt>
+                        <img id="diary-shooting-star-right" class="diary-shooting-star right" src="../images/ods/shooting_star.png" alt>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Dashboard -->
+            <div class="olb-diary-splash-info-wrap">
+                <div class="olb-diary-splash-info">
+                    <h3>Number of words read</h3>
+                    <div id="numberOfWord" class="olb-diary-numbers"></div>
+                </div>
+                <div class="olb-diary-splash-info">
+                    <h3>Time spent reading</h3>
+                    <div class="olb-diary-time">
+                        <img src="../images/ods/olb-timer.svg" class="olb-diary-timer-img" alt/>
+                        <div class="olb-diary-each-time">
+                            <p id="spentHour">0 hours</p>
+                        </div>
+                        <div class="olb-diary-each-time">
+                            <p id="spentMinute">0 minutes</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Read Books -->
+        <section class="olb-diary-content">
+            <h2 class="olb-diary-content-head"><span>Books I have read</span></h2>
+
+            <div class="olb-diary-book-slider-wrap">
+                <div id="read-books" class="olb-diary-book-slider"></div>
+            </div>
+        </section>
+
+        <div class="olb-diary-divider"></div>
+
+        <!-- Reading Books -->
+        <section class="olb-diary-content">
+            <h2 class="olb-diary-content-head"><span>Books I am reading</span></h2>
+
+            <div class="olb-diary-book-slider-wrap">
+                <div id="reading-books" class="olb-diary-book-slider olb-diary-reading-book"></div>
+            </div>
+        </section>
+    </div>
+</div>
+
+<reading-diary-status-box></reading-diary-status-box>
+<footer-copyright></footer-copyright>
+
+<div id="fade"></div>
+<div id="pic">
+    <img id="loader" src="../images/ods/olb-loader.gif" alt="spinner"/>
+</div>
+</body>
+
+<script type="text/javascript" src="component/modal-placeholder.js"></script>
+<script type="text/javascript" src="component/bookshelf-header.js"></script>
+<script type="text/javascript" src="component/header-navigation.js"></script>
+<script type="text/javascript" src="component/reading-diary-status-box.js"></script>
+<script type="text/javascript" src="component/footer-copyright.js"></script>
+<script>
+    const ga = require('../js/ods-renderer/utils/google-analytics');
+
+    ga.screen(ga.SCREEN.READING_DIARY);
+</script>
+<script>
+    require('../js/ods-renderer/commons');
+    require('../js/ods-renderer/view/profile-widget/popup');
+    require('../js/ods-renderer/view/right-panel');
+    require('../js/ods-renderer/reading-diary');
+    require('../js/ods-renderer/reading-diary-sync');
+</script>
+<script>
+    // Prevent unnecessary scroll when clicking on anchor links
+    document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+        anchor.addEventListener('click', function (e) {
+            if (e.target.id === 'skip-to-main-content') {
+                const targetId = e.target.getAttribute('href').substring(1);
+                const targetElement = document.getElementById(targetId);
+
+                targetElement.focus();
+
+                e.preventDefault(); // Prevent scroll to the element
+            }
+        });
+    });
+</script>
+</html>

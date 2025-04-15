@@ -1,0 +1,94 @@
+<style>
+  .whatsnew .modal-body.modal-body-carousel .panel-close {
+    position: relative;
+    width: 100%;
+    margin: 0;
+  }
+
+  .whatsnew .modal-body.modal-body-carousel .panel-close h1 {
+    position: relative;
+    width: 100%;
+    margin: 0;
+    padding: 0;
+    color: #111;
+    letter-spacing: .5px;
+    font-size: 1.35em;
+    font-weight:bold;
+    text-align: center;
+    line-height: 1.6em;
+  }
+
+  .whatsnew .modal-body.modal-body-carousel .panel-close button {
+    position: absolute;
+    right: 0;
+    top: 0;
+  }
+
+  .whatsnew .modal-body .carousel-inner {
+    height: auto;
+  }
+
+  .whatsnew .modal-body .onboarding-content {
+    height: auto;
+    margin: 0;
+    width: 100%;
+  }
+
+  .whatsnew .modal-body .onboarding-content p {
+    padding: 16px 0 16px;
+    font-weight: 400;
+    border-bottom: #d9d9d9 1px solid;
+    margin: 0;
+  }
+
+  .whatsnew .modal-body .onboarding-content button {
+    margin: 16px auto;
+    width: 113px;
+  }
+
+  .whatsnew .modal-body .onboarding-content button:hover {
+    background-color: rgba(41, 87, 143, 1);
+  }
+  .whatsnew .onboarding-image {
+    height: auto;
+  }
+  .whatsnew .onboarding-image img {
+    height: auto;
+    object-fit: inherit;
+    border-radius: 0;
+  }
+</style>
+
+<div class="modal-dialog whatsnew">
+  <div class="modal-content">
+    <div class="modal-body-carousel">
+      <div id="modalContents" class="carousel slide modal-body modal-body-carousel" data-interval="false">
+        <div class="row panel-close">
+          <div class="col-md-12">
+            <h1>What's new?</h1>
+            <button type="button" class="oup-hub-header-close icon" data-dismiss="modal">Close</button>
+          </div>
+        </div>
+
+        <!-- Carousel -->
+        <div id="whatsnewCarouselModalExample" class="carousel slide" data-interval="false">
+          <div class="carousel-inner" role="listbox">
+            <div class="item active">
+              <div class="onboarding-image">
+                <img src="../images/whatsnew/bugfix/banner.png" alt="">
+                <div class="carousel-caption"></div>
+              </div>
+              <div class="onboarding-content">
+                <p>We fixed some bugs to keep things working well.</p>
+                <button class="oup-hub-filled-button medium" data-dismiss="modal">Got it!</button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+
+

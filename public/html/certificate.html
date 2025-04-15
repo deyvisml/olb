@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<title>Certificate</title>
+	<link rel="shortcut icon" href="../images/ods/olb-favicon.ico"/>
+	<link rel="icon" sizes="16x16 32x32 64x64" href="../images/ods/olb-favicon.ico"/>
+	<link rel="stylesheet" type="text/css" href="../css/component/oup-hub.css"/>
+	<link rel="stylesheet" type="text/css" href="../css/lib/bootstrap.min.css"/>
+	<link rel="stylesheet" type="text/css" href="../css/lib/ces.css"/>
+	<link rel="stylesheet" type="text/css" href="../css/ods/commons.css"/>
+	<link rel="stylesheet" type="text/css" href="../css/ods/header.css"/>
+	<link rel="stylesheet" type="text/css" href="../css/ods/header-navigation.css"/>
+	<link rel="stylesheet" type="text/css" href="../css/ods/certificate.css"/>
+</head>
+<body class="olb-certificate">
+<div class="olb-modal-bg"></div>
+<div id="modal" class="modal fade in" tabindex="-1" role="dialog" style="display: none;">
+</div>
+<div id="loading-background">
+	<div class="form-validation-loading validation-loading-lg"></div>
+</div>
+
+<!-- Skip to main content's href is set to the id of the entry element -->
+<a href="#olb-share-csv" class="sr-only sr-only-focusable">Skip to main content</a>
+
+<nav class="navbar navbar-default navbar-olb-4 navbar-fixed-top">
+	<bookshelf-header></bookshelf-header>
+	<header-navigation></header-navigation>
+</nav>
+
+<modal-placeholder></modal-placeholder>
+
+<main class="olb-book-main-wrap" id="main-content">
+	<div class="olb-diary-main olb-share-main">
+		<section class="olb-diary-header olb-share-header">
+			<div class="olb-book-share">
+				<h2 class="olb-diary-splash-head">
+					<span>Download your reading diary</span>
+				</h2>
+
+				<div class="olb-certificate-center">
+					<button id="olb-share-csv" class="olb-share-wrap">
+						<div class="olb-share-icon olb-share-table"></div>
+						<p class="olb-share-text">Download a table of all your reading progress (CSV)</p>
+					</button>
+					<button id="olb-share-pdf" class="olb-share-wrap">
+						<div class="olb-share-icon olb-share-cert"></div>
+						<p class="olb-share-text">Download your reading certificate (PDF)</p>
+					</button>
+				</div>
+			</div>
+		</section>
+	</div>
+</main>
+
+<footer-copyright></footer-copyright>
+
+<div id="fade"></div>
+<div id="pic">
+	<img id="loader" src="../images/ods/olb-loader.gif" alt="spinner"/>
+</div>
+</body>
+
+<script type="text/javascript" src="component/modal-placeholder.js"></script>
+<script type="text/javascript" src="component/bookshelf-header.js"></script>
+<script type="text/javascript" src="component/header-navigation.js"></script>
+<script type="text/javascript" src="component/footer-copyright.js"></script>
+<script>
+    const ga = require('../js/ods-renderer/utils/google-analytics');
+
+	ga.screen(ga.SCREEN.CERTIFICATE);
+</script>
+<script>
+    require('../js/ods-renderer/commons');
+    require('../js/ods-renderer/view/profile-widget/popup');
+    require('../js/ods-renderer/view/right-panel');
+    require('../js/ods-renderer/certificate');
+</script>
+</html>

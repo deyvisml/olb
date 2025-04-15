@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Oxford Learner's Bookshelf</title>
+    <link rel="shortcut icon" href="../images/ods/olb-favicon.ico"/>
+    <link rel="icon" sizes="16x16 32x32 64x64" href="../images/ods/olb-favicon.ico"/>
+    <link rel="stylesheet" type="text/css" href="../css/component/oup-hub.css"/>
+    <link rel="stylesheet" type="text/css" href="../css/lib/bootstrap.min.css"/>
+    <link rel="stylesheet" type="text/css" href="../css/lib/radial-progress.css"/>
+    <link rel="stylesheet" type="text/css" href="../css/lib/ces.css"/>
+    <link rel="stylesheet" type="text/css" href="../css/ods/commons.css"/>
+    <link rel="stylesheet" type="text/css" href="../css/ods/header.css"/>
+    <link rel="stylesheet" type="text/css" href="../css/ods/header-navigation.css"/>
+    <link rel="stylesheet" type="text/css" href="../css/ods/invitation-banner.css"/>
+    <link rel="stylesheet" type="text/css" href="../css/ods/bookshelf.css"/>
+    <link rel="stylesheet" type="text/css" href="../css/ods/bookshelf-status-box.css"/>
+    <link rel="stylesheet" type="text/css" href="../css/ods/bookshelf-pulldown.css"/>
+    <link rel="stylesheet" type="text/css" href="../css/ods/bookshelf-search.css"/>
+    <script>
+        (() => {
+            const ga = require('../js/ods-renderer/utils/google-analytics');
+
+            ga.screen(ga.SCREEN.BOOKSHELF);
+        })();
+
+        (() => {
+            const env = require('../js/config/env-config');
+            const reCAPTCHASiteKey = env.get(env.OLBConfig.OLB_RECAPTCHA_SITE_KEY);
+            const script = document.createElement('script');
+
+            script.src = `https://www.google.com/recaptcha/api.js?render=${reCAPTCHASiteKey}`;
+            script.async = true;
+
+            document.head.appendChild(script);
+        })();
+    </script>
+</head>
+<body class="olb-bookshelf">
+<div class="olb-modal-bg"></div>
+<div id="modal" class="modal fade in" tabindex="-1" role="dialog" style="display: none;">
+</div>
+<div id="loading-background">
+    <div class="form-validation-loading validation-loading-lg"></div>
+</div>
+<a href="#main-content" class="sr-only sr-only-focusable">Skip to main content</a>
+
+<nav class="navbar navbar-default navbar-olb-4 navbar-fixed-top">
+    <bookshelf-header></bookshelf-header>
+    <header-navigation></header-navigation>
+</nav>
+
+<modal-placeholder></modal-placeholder>
+<invitation-banner></invitation-banner>
+
+<!-- Add book button above the bookshelf -->
+<div class="add-book-header">
+    <div class="container">
+        <button id="bookshelf-nav-add-book" type="button" class="add-book-header-button" title="Add books">
+            Add books
+        </button>
+    </div>
+</div>
+
+<main class="olb-book-main-wrap" id="main-content">
+    <div class="olb-book-main">
+        <section class="olb-book-content-wrap">
+
+            <!-- Error View -->
+            <div class="olb-book-error" style="display: none">
+                <img src="../images/ods/olb-error.svg" alt="Error message" class="olb-book-error-icon"/>
+                <h1 class="olb-book-error-heading">
+                    Your bookshelf is temporarily unavailable.<br/> Please try again later.
+                </h1>
+                <p class="olb-book-error-text">
+                    If you continue to have problems, please email
+                    <a href="mailto:eltsupport@oup.com" class="olb-book-error-link">Customer Support</a>.
+                </p>
+            </div>
+
+            <div id="olb-book-content" class="olb-book-content">
+                <!-- Collections and Books will be injected here -->
+
+                <bookshelf-dropdown></bookshelf-dropdown>
+            </div>
+        </section>
+    </div>
+</main>
+
+<bookshelf-status-box></bookshelf-status-box>
+<footer-copyright></footer-copyright>
+
+</body>
+
+<script type="text/javascript" src="component/modal-placeholder.js"></script>
+<script type="text/javascript" src="component/bookshelf-header.js"></script>
+<script type="text/javascript" src="component/header-navigation.js"></script>
+<script type="text/javascript" src="component/invitation-banner.js"></script>
+<script type="text/javascript" src="component/bookshelf-dropdown.js"></script>
+<script type="text/javascript" src="component/bookshelf-status-box.js"></script>
+<script type="text/javascript" src="component/footer-copyright.js"></script>
+<script>
+    require('../js/ods-renderer/commons');
+    require('../js/ods-renderer/view/profile-widget/popup');
+    require('../js/ods-renderer/view/right-panel');
+    require('../js/ods-renderer/bookshelf');
+    require('../js/ods-renderer/bookshelf-action');
+    require('../js/ods-renderer/bookshelf-user-data-sync');
+    require('../js/ods-renderer/bookshelf-game-sync');
+    require('../js/ods-renderer/invitations');
+</script>
+</html>

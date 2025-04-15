@@ -1,0 +1,102 @@
+html {
+    min-height: auto; }
+body {
+    margin-top: 59px; }
+
+.navbar-fixed-top {
+    border: none;
+}
+.navbar-default .header-wrapper {
+    width: 100%;
+    background: #002147;
+}
+.navbar-default .header-wrapper .navbar-header {
+    display: flex; justify-content: center;
+}
+.navbar-default .header-wrapper .navbar-header .navbar-brand {
+    padding: 13px 0 0 0;
+}
+.navbar-default .header-wrapper .navbar-header .oup-branding {
+    width: 150px;
+}
+.navbar-default .header-wrapper .navbar-header {
+    font-family: "open-sans", "Georgia", sans-serif;
+    color: #fff; }
+
+.footer-container.guide-links {
+    font-family: "open-sans", "fira-sans", sans-serif;
+    background: #cad7d8;
+}
+.footer-container.privacy-toc {
+    font-family: "open-sans", "fira-sans", sans-serif;
+    background: #002147;
+}
+
+.footer .footer-container.guide-links .footer-content-container .row ul li a {
+    color: #333; }
+.footer .footer-container.guide-links .footer-content-container .row .logo-container p {
+    color: #333; }
+
+.footer .footer-container.privacy-toc .footer-corporate-container ul li,
+.footer .footer-container.privacy-toc .footer-corporate-container ul li a {
+    color: #ccd2d9; }
+
+.container {
+    width: 100%;
+}
+.container .navbar-header,
+.container .navbar-collapse {
+    margin-right: auto;
+    margin-left: auto;
+    float: none;
+}
+.container .banner-content,
+.homepage-content.feature-sections,
+.container .footer-body {
+    margin-right: auto;
+    margin-left: auto;
+}
+
+.homepage-section.olb-homepage-section2 {
+    padding: 80px 0;
+}
+.olb-homepage-section2 .homepage-content.feature-sections {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+
+.margin-top {
+    margin-top: 24px;
+}
+
+
+@media (min-width: 768px) {
+    .container .navbar-header,
+    .container .navbar-collapse,
+    .container .banner-content,
+    .homepage-content.feature-sections,
+    .container .footer-body {
+        width: 750px;
+    }
+}
+@media (min-width: 992px) {
+    .container .navbar-header,
+    .container .navbar-collapse,
+    .container .banner-content,
+    .homepage-content.feature-sections,
+    .container .footer-body {
+        width: 1024px;
+    }
+}
+@media (min-width: 1200px) {
+    .container .navbar-header,
+    .container .navbar-collapse,
+    .container .banner-content,
+    .homepage-content.feature-sections,
+    .container .footer-body {
+        width: 1170px;
+    }
+}

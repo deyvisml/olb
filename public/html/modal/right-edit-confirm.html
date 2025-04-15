@@ -1,0 +1,68 @@
+<div class="right-panel-container">
+  <div class="panel-header-fixed">
+    <div class="row panel-close">
+      <div class="col-md-12">
+        <a href="#" class="right-panel-close link-close" data-dismiss="modal">Close</a>
+      </div>
+    </div>
+    <div class="ces-panel-header-container">
+      <div class="row">
+        <div class="col-md-12 col-test">
+          <div class="ces-page-header-static">
+            <div class="ces-ellipse-image icon-validation-active"></div>
+            <div class="ces-page-title-text">
+              <div class="ces-page-subtext">
+                Your profile has been updated
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="panel-content-container">
+    <div class="row">
+      <div class="col-sm-12">
+        <table class="table table-confirmation">
+          <tbody id="table-body">
+          <tr>
+            <td class="table-col-item table-col-overflow-container">
+              <a>
+                <div class="table-col-overflow">
+                  <div class="ces-ellipse-medium ces-profile-flat table-icon">
+                    <div class="ces-ellipse-image icon-class"></div>
+                  </div>
+                  <div class="table-text">
+                    <div class="table-text-container">
+                      <p id="user-profile-fullname"></p>
+                      <h5 id="user-profile-email"></h5>
+                    </div>
+                  </div>
+                </div>
+              </a>
+            </td>
+          </tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
+  </div>
+  <div class="panel-footer-fixed">
+    <div class="row right-panel-buttons">
+      <div class="col-md-12">
+        <label>Actions:</label>
+        <button id="edit-profile-back" type="button" class="btn btn-action link btn-block">Return to profile settings</button>
+        <button id="edit-profile-done" type="button" class="btn btn-primary btn-block right-panel-close">Done</button>
+      </div>
+    </div>
+  </div>
+</div>
+<script>
+    require('../js/ods-renderer/view/auth/edit-confirm');
+
+    if (onEditConfirmPanelLoaded && typeof onEditConfirmPanelLoaded === 'function') {
+        onEditConfirmPanelLoaded();
+    }
+</script>
+
+

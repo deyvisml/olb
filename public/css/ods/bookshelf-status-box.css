@@ -1,0 +1,53 @@
+bookshelf-status-box {
+    position: fixed;
+    width: 100%;
+    height: 40px;
+    bottom: 51px;
+    max-width: 1200px;
+    left: 50%;
+    transform: translateX(-50%);    /* align center horizontal */
+    pointer-events: none;
+}
+
+bookshelf-status-box .sync-box {
+    position: absolute;
+    display: none;
+    box-shadow: rgba(0,0,0, .2) 0 0 12px;
+    pointer-events: all;
+}
+bookshelf-status-box #ads-sync-required {
+    right: 36px;
+    text-align: right;
+}
+bookshelf-status-box #update-game-required,
+bookshelf-status-box #update-game-inprogress {
+    left: 36px;
+    text-align: left;
+}
+
+bookshelf-status-box .sync-box .sync-badge {
+    height: 32px;
+    box-shadow: rgba(0,0,0, .2) 0 0 12px;
+}
+
+@keyframes game-update-spinner {
+    to {
+        transform: rotate(360deg);
+    }
+}
+
+bookshelf-status-box .game-update-spinner:before {
+    content: '';
+    box-sizing: border-box;
+    position: absolute;
+    top: 16px;
+    left: 22px;
+    width: 20px;
+    height: 20px;
+    margin-top: -10px;
+    margin-left: -10px;
+    border-radius: 50%;
+    border-top: 3px solid rgb(253,144,0);
+    border-right: 2px solid transparent;
+    animation: game-update-spinner .6s linear infinite;
+}

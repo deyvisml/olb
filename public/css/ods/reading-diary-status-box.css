@@ -1,0 +1,26 @@
+reading-diary-status-box {
+    position: fixed;
+    width: 100%;
+    height: 40px;
+    bottom: 51px;
+    max-width: 1200px;
+    left: 50%;
+    transform: translateX(-50%);    /* align center horizontal */
+    pointer-events: none;
+}
+
+reading-diary-status-box .sync-box {
+    position: absolute;
+    display: none;
+    box-shadow: rgba(0,0,0, .2) 0 0 12px;
+    pointer-events: all;
+}
+reading-diary-status-box #diary-sync-required {
+    right: 36px;
+    text-align: right;
+}
+
+reading-diary-status-box .sync-box .sync-badge {
+    height: 32px;
+    box-shadow: rgba(0,0,0, .2) 0 0 12px;
+}

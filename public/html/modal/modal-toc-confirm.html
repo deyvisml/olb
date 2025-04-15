@@ -1,0 +1,41 @@
+<div class="modal-dialog modal-lg">
+  <div class="modal-content">
+    <div class="modal-body-carousel">
+      <div class="modal-header">
+        <div class="col-md-6">
+          <a class="oup-branding" href="#"></a>
+        </div>
+        <div class="panel-close">
+          <div class="col-md-6">
+            <button type="button" class="btn btn-default btn-nav link-close" data-dismiss="modal" onclick="submit();">Close</button>
+          </div>
+        </div>
+      </div>
+      <div class="modal-body register-confirm-body">
+        <div class="row">
+          <div class="col-md-12">
+            <div>
+              <img src="../images/icons/validation/icon-validation-tick.svg"/>
+            </div>
+            <h1>Hi<span class="success-first-name"></span>, your account has successfully been updated</h1>
+            <h2>Please click on the button below to continue</h2>
+            <div>
+              <button type="button" data-dismiss="modal" onClick="submit();"
+                      class="btn btn-primary">Start using Oxford Learner's Bookshelf</button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+<script>
+    function submit() {
+        const $ = require('jquery');
+        const { ipcRenderer } = require('electron');
+
+        ipcRenderer.send('auth-partial-register-complete');
+
+        $('#loading-background').show();
+    }
+</script>

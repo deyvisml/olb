@@ -1,0 +1,113 @@
+<style>
+  .onboarding-content {
+    margin: 15px calc(15px * 4);
+    width: calc(100% - (15px * 8));
+    font-size: 1.05em;
+    overflow-y: hidden;
+  }
+  .onboarding-new {
+    display: inline-block;
+    position: relative;
+    width: 55px;
+    height: 29px;
+    bottom: 133px;
+    color: white;
+    line-height: 29px;
+    font-size: 19px;
+    font-weight: 600;
+    background: #ff1300;
+    border-radius: 3px;
+  }
+</style>
+<div class="modal-dialog" role="document">
+  <div class="modal-content">
+    <div class="modal-body modal-body-carousel">
+
+      <div class="row panel-close">
+        <div class="col-md-12">
+          <button type="button" class="btn btn-default btn-nav link-close" data-dismiss="modal">Close</button>
+        </div>
+      </div>
+
+      <!-- Carousel -->
+      <div id="onboarding-carousel" class="carousel slide" data-interval="false">
+
+        <div class="carousel-inner" role="listbox">
+          <div class="item active">
+            <div class="onboarding-image">
+              <img src="../images/onboarding/onboarding-1.jpg" alt="john-schnobrich-unsplash" data-credit="john-schnobrich-unsplash">
+              <div id="welcomeHeader" class="carousel-caption">
+              </div>
+            </div>
+            <div class="onboarding-content">
+              <p>Start learning or teaching English with our ebooks.</p>
+            </div>
+          </div>
+
+          <div class="item">
+            <div class="onboarding-image">
+              <img src="../images/onboarding/onboarding-2.jpg" alt="alex-blajan-unsplash" data-credit="alex-blajan-unsplash">
+              <div class="carousel-caption">
+                <h1>Watch and listen</h1>
+              </div>
+            </div>
+            <div class="onboarding-content">
+              <p>Watch video and listen to the audio for your course, straight from the page.</p>
+            </div>
+          </div>
+
+          <div class="item">
+            <div class="onboarding-image">
+              <img src="../images/onboarding/onboarding-3.jpg" alt="patricia-prudente-unsplash" data-credit="patricia-prudente-unsplash">
+              <div class="carousel-caption">
+                <h1>A world‑famous dictionary</h1>
+              </div>
+            </div>
+            <div class="onboarding-content">
+              <p>Look up dictionary definitions with pronunciation guidance, at the right level for you.</p>
+            </div>
+          </div>
+
+          <div class="item">
+            <div class="onboarding-image">
+              <img src="../images/onboarding/onboarding-4.jpg" alt="ash-edmonds-unsplash" data-credit="ash-edmonds-unsplash">
+              <div class="carousel-caption">
+                <h1>How much can you read?</h1>
+              </div>
+            </div>
+            <div class="onboarding-content">
+              <p>See how many words you have read and how long you have spent reading Graded Readers with the Reading Diary.</p>
+            </div>
+          </div>
+
+          <div class="item">
+            <div class="onboarding-image">
+              <img src="../images/onboarding/onboarding-5.png" alt="ash-edmonds-unsplash" data-credit="ash-edmonds-unsplash">
+              <span class="onboarding-new">New</span>
+              <div class="carousel-caption">
+                <h1><strong>Oxford Learner's Bookshelf</strong><br><i style="font-weight: 300;">for Schools</i></h1>
+              </div>
+            </div>
+            <div class="onboarding-content">
+              <p>Quickly set up and manage your students and teachers accounts. Go to <strong>My Account</strong> to learn more.</p>
+            </div>
+          </div>
+        </div>
+
+        <!-- Navigation -->
+        <div class="carousel-navigation carousel-navigation-onboarding">
+          <button type="button" href="#onboarding-carousel" class="btn btn-default btn-with-icon btn-back btn-back-navigation" data-slide="prev"></button>
+          <!-- Indicators -->
+          <ol class="carousel-indicators">
+            <li data-target="#onboarding-carousel" data-slide-to="0" class="active"></li>
+            <li data-target="#onboarding-carousel" data-slide-to="1" class=""></li>
+            <li data-target="#onboarding-carousel" data-slide-to="2" class=""></li>
+            <li data-target="#onboarding-carousel" data-slide-to="3" class=""></li>
+            <li data-target="#onboarding-carousel" data-slide-to="4" class=""></li>
+          </ol>
+          <button type="button" href="#onboarding-carousel" class="btn btn-default btn-with-icon btn-back btn-next-navigation" data-slide="next"></button>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

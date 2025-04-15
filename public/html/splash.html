@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Oxford Learner's Bookshelf</title>
+<link rel="stylesheet" type="text/css" href="../css/component/oup-hub.css"/>
+<link rel="stylesheet" type="text/css" href="../css/lib/ces.css"/>
+<style>
+    body {
+        background: var(--oup-hub-color-primary);
+    }
+    .cover-logo {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        width: 500px;
+        height: auto;
+        overflow: hidden;
+        margin-top: -150px;
+        margin-left: -250px;
+    }
+</style>
+</head>
+<body>
+<div class="cover-logo">
+    <img src="../images/splash/splash-logo.svg"/>
+    <div id="spinner">
+        <div class="form-validation-loading validation-loading-lg"></div>
+    </div>
+</div>
+</body>
+<script>
+    const { ipcRenderer } = require('electron');
+
+    ipcRenderer.send('network-status-initialize', navigator.onLine);
+</script>
+</html>

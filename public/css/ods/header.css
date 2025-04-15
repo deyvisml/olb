@@ -1,0 +1,9 @@
+.navbar-header .oup-branding {
+    width: 151px;
+    background-image: url("../../images/logos/oup-logo-navy.svg");
+}
+
+.navbar-profile .help-support-box {
+    display: block;
+    padding: 8px 0;
+    margin-right: 12px; }

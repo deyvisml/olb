@@ -1,0 +1,18 @@
+#nav-bar-search-box {
+    width: 324px;
+    padding-right: 2px;
+}
+
+#header-class-btn-group {
+    display: inline-block;
+}
+#header-class-btn-group .oup-hub-link-button {
+    margin-left: 8px;
+    margin-top: 8px;
+}
+
+@media only screen and (max-width: 1199px) {
+    #nav-bar-search-box {
+        width: 280px;
+    }
+}

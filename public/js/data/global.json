@@ -1,0 +1,17 @@
+{
+    "device": {
+        "id": "string",
+        "online": false
+    },
+    "application": {
+        "version": "string",
+        "debug": true
+    },
+    "user": {
+        "id": "string",
+        "legacy": true,
+        "partial": true
+    },
+    "action-open": {},
+    "action-deeplink": {}
+}

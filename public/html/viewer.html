@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="UTF-8">
+	<!--<meta http-equiv="X-UA-Compatible" content="requiresActiveX=true"/>-->
+	<meta http-equiv="X-UA-Compatible" content="IE=Edge,chrome=1" />
+	<meta http-equiv="Pragma" content="no-cache" />
+	<meta http-equiv="Cache-Control" content="no-cache" />
+	<meta http-equiv="Expires" content="Sat, 01 Dec 2001 00:00:00 GMT" />
+	<title>Oxford Learner's Bookshelf</title>
+	<script type="text/javascript" src="../js/ods-viewer/module.js"></script>
+	<script src="../js/ods-viewer/lib/jquery-ui.min.js"></script>
+	<link href="../css/viewer/jquery-ui.min.css" rel="stylesheet">
+
+	<script type="text/javascript" src="../js/ods-viewer/lib/aws-sdk-2.7.7.min.js"></script>
+	<script type="text/javascript" src="../js/ods-viewer/lib/jquery.bxslider.min.js" defer></script>
+	<link type="text/css" href="../css/viewer/jquery.bxslider.min.css" rel="stylesheet" />
+	<script type="text/javascript" src="../js/ods-viewer/message.js"></script>
+	<script type="text/javascript" src="../js/ods-viewer/recorderWV.js"></script>
+
+	<script type="text/javascript" src="../js/ods-viewer/lib/recorder.js"></script>
+	<script type="text/javascript" src="../js/ods-viewer/lib/jReject/jquery.reject.min.js"></script>
+	<script type="text/javascript" src="../js/ods-viewer/lib/moment-with-locales.js"></script>
+	<script type="text/javascript" src="../js/ods-viewer/lib/rangy-core.js"></script>
+	<script type="text/javascript" src="../js/ods-viewer/audio-lib/WebAudioRecorder.js"></script>
+
+	<!-- Include Viewer Bundle from @ipf-dev/olb-viewer-frontend-->
+	<link rel='stylesheet' type='text/css' media='screen' href='../../node_modules/@ipf-dev/olb-viewer-frontend/dist/ods/style.css'/>
+	<script type="text/javascript" src="../../node_modules/@ipf-dev/olb-viewer-frontend/dist/ods/bundle.js"></script>
+	<script type="text/javascript" src="../../node_modules/@ipf-dev/olb-viewer-frontend/dist/ods/vendor.js"></script>
+	<!-- End Include Viewer Bundle from @ipf-dev/olb-viewer-frontend-->
+
+	<link href="../js/ods-viewer/lib/jReject/jquery.reject.css" rel="stylesheet" type="text/css"/>
+	<link type="text/css" href="../css/viewer/font.css" rel="stylesheet" />
+</head>
+<body>
+	<div id="loading-background">
+		<div class="form-validation-loading validation-loading-lg"></div>
+	</div>
+	<!-- <div class="olb-book-error">
+		<img src="../images/viewer/olb-error.png">
+		<h1></h1>
+	</div> -->
+	<div id='root'></div>
+	<script src="../js/ods-viewer/lib/strings.js"></script>
+
+    <script type="text/javascript">
+	    //open links externally by default
+	    $(document).on('click', 'a[href^="http"]', function(event) {
+	        event.preventDefault();
+	        shell.openExternal(this.href);
+	    });
+
+		$(function() {
+			document.getElementById('loading-background').style.display = 'block';
+
+			const ga = require('../js/ods-renderer/utils/google-analytics');
+
+			const bookdata = remote.getGlobal('action-open-book');
+			const metadata /* LibraryBook */ = ipcRenderer.sendSync('rdp-book', bookdata.bid);
+			const user = ipcRenderer.sendSync('rdp-user');
+
+			ga.sendEvent(ga.CATEGORY.BOOKSHELF, ga.ACTION.OPEN, bookdata.bid, {
+				bid: bookdata.bid,
+				isbn: metadata.isbn,
+				cefr_level: metadata.cefrLevel,
+				collection: bookdata.collectionTitle,
+			});
+			ga.screen(ga.SCREEN.VIEWER);
+
+			Message.setLang('EN'); //국가 언어 셋팅
+
+			history.pushState(null, null, '');
+			window.addEventListener('popstate', function (e) {
+				history.pushState(null, null, '');
+			});
+
+			ViewerForOds({
+				path: 'root',
+				bookID: bookdata.bid,
+				cdnUrl: '',
+                client: 'eac',
+                userID: user.id,
+                isReadingDiaryOn: metadata.type.readers,
+                cefr: bookdata.CEFR,
+				isCPT: metadata.type.classroomPresentation,
+				debugUrl: 'none',
+				isbn: metadata.isbn,
+				rcategory: bookdata.category,
+				collection: [],
+				isGradebook: metadata.type.gradebook,
+				productID: metadata.productId,
+				organisationID: bookdata.organizationIds.join(','),
+				assignGroupID: bookdata.assignmentGroupIds.join(','),
+				collectionTitle: bookdata.collectionTitle,
+				isValidLaunchParameter: true,
+				environment: bookdata.environment,
+			});
+
+			rangy.init();
+		});
+	</script>
+</body>
+</html>

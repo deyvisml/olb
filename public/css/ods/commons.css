@@ -1,0 +1,423 @@
+.clear {
+    clear: both;
+}
+
+.input-message-error {
+    display: none;
+}
+
+.checkbox-input + .checkbox-label {
+    z-index: 10;
+}
+.checkbox-input ~ .checkbox-description {
+    position: relative;
+    top: -30px;
+}
+
+
+input[type=checkbox].checkbox-input + label + label {
+    font-weight: 400;
+}
+
+input[type=checkbox].checkbox-input + label + label.checkbox-label-form {
+    padding-left: 40px;
+    padding-top: 1px;
+    height: auto;
+    min-height: 25px;
+}
+
+
+#loading-background {
+    display: none;
+    position: fixed;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    z-index: 10100;
+    background-color: rgba(0, 0, 0, 0.51);
+}
+#loading-background .form-validation-loading {
+    position: absolute;
+    top: calc(50% - 50px);
+    left: calc(50% - 50px)
+}
+
+a .link-img {
+    display: inline-block;
+    background-image: url("../../images/icons/links/icon-link-external.svg");
+    width: 16px;
+    height: 16px;
+}
+
+a.ces-underline-link {
+    display: block;
+    margin: 0;
+    padding: 0;
+    color: #002147 !important;
+    text-decoration: underline !important;
+    text-underline-offset: 4px;
+    font-weight: 600 !important;
+    font-family: "open-sans", "fira-sans", sans-serif;
+}
+a.ces-underline-link:hover {
+    cursor: pointer;
+    background-color: rgba(0, 33, 71, 0.1);
+}
+a.ces-underline-link .link-img {
+    margin-left: 6px;
+    background-image: url("../../images/icons/links/icon-link-external-darknavy.svg") !important;
+    width: 14px !important;
+    height: 14px !important;
+}
+
+button .link-img {
+    background-image: url("../../images/icons/links/icon-link-external-in-button.svg");
+}
+
+ul.dropdown-menu {
+    min-width: 353px;
+}
+.dropdown-menu > li > a:hover,
+.dropdown-menu > li > a:focus {
+    color: var(--oup-hub-color-primary);
+    background-color: #ffffff;
+}
+
+
+#fade {
+    position: fixed;
+    display: none;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 10001;
+    background-color: #ababab;
+    opacity: .70;
+    filter: alpha(opacity=80);
+}
+#pic {
+    display: none;
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    margin: -58px;
+    width: 116px;
+    height: 116px;
+    padding:21px 0 0 0;
+    border: 3px solid #ababab;
+    box-shadow:1px 1px 10px #ababab;
+    border-radius:20px;
+    background-color: white;
+    z-index: 10002;
+    text-align:center;
+    overflow: auto;
+}
+#pic2 {
+    display: none;
+    position: fixed;
+    top: 67%;
+    left: 50%;
+    margin: -58px;
+    width: 116px;
+    height: 116px;
+    padding:25px 0 0 0;
+    border-radius:20px;
+    background-color: white;
+    z-index: 10002;
+    text-align:center;
+    overflow: auto;
+}
+
+
+/* profile-popup */
+.profile-dropdown .icon-class-seat {
+    background-image: url("../../images/icons/other/icon-plus-blue.svg");
+}
+.profile-dropdown .ces-ellipse-extra-small.ces-ellipse-extra-small.ces-class-seats {
+    border-color: #4776ae;
+}
+.profile-dropdown .dropdown-menu .ces-list-group .user-name {
+    display: inline-block;
+    color: #333333;
+}
+/* Keep the Edit button at right right top. if the username or firstname is too long then the Edit button is downward.*/
+.profile-dropdown .ces-list-group {
+    max-width: 280px;
+    min-height: 42px;
+    overflow: hidden;
+}
+.profile-dropdown .dropdown-menu .link-img {
+    display: inline-block;
+    background-image: url("../../images/icons/links/icon-link-external.svg");
+    width: 16px;
+    height: 16px;
+}
+.profile-dropdown .dropdown-menu .link-img:hover {
+    background-image: url("../../images/icons/links/icon-link-external-hover.svg");
+}
+.profile-dropdown .dropdown-menu a {
+    cursor: default;
+}
+.profile-dropdown .dropdown-menu a.hub-link {
+    display: inline-block;
+    margin-top: 24px;
+    padding: 0;
+}
+.profile-dropdown .dropdown-menu a .edit {
+    float: right;
+    display: inline;
+    cursor: pointer;
+}
+/* Remark: Temporary remove CES out-link. *//*
+.profile-dropdown .dropdown-menu .organization-li a:nth-child(1) {
+    border-bottom: 1px dotted #d9d9d9;
+}
+*/
+
+.profile-dropdown .dropdown-menu .profile-box {
+    margin: 8px 0 0 16px;
+}
+.profile-dropdown .dropdown-menu .profile-name-box {
+    position: relative;
+    display: inline-block;
+    margin-left: 8px;
+    margin-top: 2px;
+}
+.profile-dropdown .dropdown-menu .profile-name-box #profile-wdg-username {
+    margin: 4px 0 0 0;
+}
+.profile-dropdown .dropdown-menu .oup-hub-banner .oup-hub-banner-body {
+    margin: 15px;
+    padding: 0 0 15px 15px;
+    color: #011E41;
+    background: #E5ECED;
+}
+.profile-dropdown .dropdown-menu .oup-hub-banner .oup-hub-banner-body h2 {
+    margin: 0;
+    padding-top: 15px;
+    font-family: "dm-serif-display", Serif, "open-sans", sans-serif;
+    font-size: 25px;
+    font-weight: 400;
+    line-height: 32px;
+    color: var(--oup-hub-color-primary);
+}
+.profile-dropdown .dropdown-menu .oup-hub-banner .oup-hub-banner-body p {
+    margin-top: 8px;
+    margin-right: 68px;
+    font-family: "open-sans", sans-serif;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 22px;
+    color: var(--oup-hub-color-primary);
+}
+.profile-dropdown .dropdown-menu .oup-hub-banner .oup-hub-banner-body button {
+    margin-top: 4px;
+}
+.profile-dropdown .dropdown-menu .oup-hub-banner .oup-hub-banner-body img {
+    float: right;
+}
+
+.profile-dropdown li {
+    cursor: default;
+}
+.profile-dropdown li a:hover {
+    cursor: pointer;
+}
+/* profile-popup */
+
+
+
+/* right-panel */
+.right-panel-container .panel-footer-fixed a {
+    cursor: pointer;
+}
+/* right-panel */
+
+
+
+/* learn-more */
+.learnmore-image {
+    width: 100%;
+    height: 280px;
+    position: relative;
+}
+.learnmore-image img {
+    width: 100%;
+    height: 280px;
+    object-fit: cover;
+    border-radius: 6px 6px 0 0;
+}
+.learnmore-image .carousel-caption {
+    left: 20%;
+    right: 20%;
+    bottom: 0;
+    padding-bottom: 0;
+}
+.learnmore-image .carousel-caption h1 {
+    font-size: 26px;
+    margin-bottom: 6px;
+}
+/* learn-more */
+
+
+/* register-confirmation */
+.ces-card.olb-card-top .ces-card-header.olb-card {
+    background-color: #9fd368;
+}
+.ces-card.olb-card-top {
+    border-top-color: #9fd368;
+}
+
+.register-confirm-body {
+    padding: 108px 0 138px;
+}
+.register-confirm-body img {
+    width: 100px;
+    height: 100px;
+    margin: 0 auto 19px;
+}
+/* register-confirmation */
+
+
+/* modals */
+.olb-modal-active {
+    overflow: hidden;
+}
+
+.olb-modal-bg {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    background-color: #333333;
+    opacity: 0.8;
+    text-align: center;
+    z-index: 1040;
+}
+/* modals */
+
+
+/* content placing */
+.olb-book-main, .olb-diary-main {
+    min-width: 600px;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+.olb-diary-main {
+    margin-top: 18px;
+    margin-bottom: 85px;
+}
+/* content placing - EOD */
+
+
+/* book-cover */
+.olb-diary-book-cover {
+    background-color: #ffffff;
+    padding: 55px 15px 0;
+    position: relative;
+}
+.olb-diary-book-cover img {
+    height: 170px;
+    width: 130px;
+    color: #ffffff;
+}
+.olb-diary-book-cover object {
+    height: 170px;
+    width: 130px;
+    color: #ffffff;
+}
+.olb-diary-book-cover-finished {
+    background-image: url("../../images/ods/olb-medal.png");
+    background-repeat: no-repeat;
+    background-size: 40px auto;
+    background-position: top right;
+}
+.olb-diary-book-cover-finished .olb-diary-book-text-progress {
+    color: transparent;
+}
+/* book-cover - EOD */
+
+
+/* reading progress over book-cover */
+.olb-diary-progress-bar {
+    position: relative;
+    width: 100%;
+    height: 10px;
+    z-index: 10;
+    margin-bottom: -10px;
+    background-color: #ffd999;
+}
+.olb-diary-progress-bar-inner {
+    height: 100%;
+    background-color: #ffa000;
+}
+.olb-diary-book-text-progress {
+    position: absolute;
+    top: 20px;
+    left: 15px;
+    font-size: 11px;
+}
+/* reading progress over book-cover - EOD */
+
+
+
+/* ribbon-title */
+.olb-diary-content {
+    margin: 0 36px;
+    background-color: #ffffff;
+    text-align: center;
+}
+.olb-diary-content-head,
+.olb-diary-splash-head {
+    background: #ffa000;
+    background: linear-gradient(to bottom, #ffa000 0%, #ffb400 100%);
+    display: inline-block;
+    position: relative;
+    font-size: 28px;
+    padding: 6px 0;
+    overflow: hidden;
+}
+.olb-diary-content-head span {
+    color: #333333;
+}
+.olb-diary-splash-head span {
+    color: #FFFFFF;
+}
+
+.olb-diary-content-head span,
+.olb-diary-splash-head span {
+    display: block;
+    padding: 10px 70px;
+    border-top: 1px solid white;
+    border-bottom: 1px solid white;
+}
+.olb-diary-content-head:before,
+.olb-diary-content-head:after,
+.olb-diary-splash-head:before,
+.olb-diary-splash-head:after {
+    content: "";
+    width: 50px;
+    height: 50px;
+    background-color: #ffffff;
+    position: absolute;
+    transform: rotate(-55deg) skew(-20deg);
+}
+.olb-diary-content-head:before, .olb-diary-splash-head:before {
+    left: -30px;
+    top: 9px;
+}
+.olb-diary-content-head:after, .olb-diary-splash-head:after {
+    right: -30px;
+    top: 12px;
+}
+/* ribbon-title - EOD */
+
+
+/* hide google recaptcha symbol */
+.grecaptcha-badge {
+    visibility: hidden !important;
+}

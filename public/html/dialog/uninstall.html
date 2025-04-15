@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+	<meta charset="UTF-8" />
+	<title>Checking for updates...</title>
+	<link rel="stylesheet" type="text/css" href="../../css/ods/uninstall.css"/>
+</head>
+<script>
+</script>
+<body>
+<div style="margin: 20px;">
+	<div style="text-align:center;margin-top:30px;">
+		Uninstalling<br>Oxford Learner's Bookshelf
+	</div>
+	<div class="loader red">
+		<div id="progress-bar" class="progress-bar">
+			<div id="progress-stripes" class="progress-stripes">////////////////////////</div>
+		</div>
+	</div>
+</div>
+<script>
+    window.onload = () => {
+	    let { ipcRenderer } = require('electron');
+
+        ipcRenderer.send('app-uninstall-request');
+        ipcRenderer.on('app-uninstall-progress-update', (event, progress) => {
+            document.getElementById('progress-bar').style.width = progress + '%';
+        });
+	};
+</script>
+</body>
+</html>

@@ -1,0 +1,32 @@
+<div class="modal-dialog">
+	<div class="modal-content">
+		<div class="modal-body-carousel">
+			<div id="modalContents" class="carousel slide modal-body modal-body-carousel" data-interval="false">
+				<div class="row panel-close">
+					<div class="col-md-12">
+						<button type="button" class="oup-hub-header-close icon" data-dismiss="modal">Close</button>
+					</div>
+				</div>
+				<div class="modal-body modal-add-book-confirm">
+					<div class="row">
+						<div class="col-md-12">
+							<div class="modal-status-icon">
+								<img src="../images/icons/validation/icon-validation-tick.svg"/>
+							</div>
+							<h1>Your books have been added to your Bookshelf</h1>
+							<div id="addedBooks" class="add-book-info-wrap"></div>
+							<div>
+								<button class="oup-hub-filled-button medium" data-dismiss="modal" onclick="location.reload(true);">Done</button>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+</div>
+<script>
+	if (ga) {
+      ga.screen(ga.SCREEN.REDEEM_SUCCESS);
+	}
+</script>

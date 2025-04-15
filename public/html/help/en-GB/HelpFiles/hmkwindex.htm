@@ -1,0 +1,273 @@
+﻿<!DOCTYPE html>
+<html lang="en-us"><head>
+   <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+   <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+
+   <!-- This line includes the general project style sheet (not required) -->
+   <link type="text/css" href="custom.css" rel="stylesheet">
+
+<!--[if lt IE 7]>
+<style type="text/css">
+html { overflow-x: hidden;} 
+</style> 
+<![endif]-->
+   <script type="text/javascript" src="jquery.js"></script>
+   <script type="text/javascript" src="helpman_settings.js"></script>
+   <script type="text/javascript" src="hmcontextids.js"></script>
+</head>
+<body style="background-color: #FFFFFF; background-image: url(lines.gif); ">
+<p class="navtitle">Help and Support</p>
+<p class="navbar">
+<a href="hmcontent.htm">Contents</a>&nbsp;|&nbsp;<b>Index</b>&nbsp;<span id="navsearch">|&nbsp;<a href="hmftsearch.htm">Search</a></span>
+</p><hr size="1" />
+
+  <a href="#A">A</a>
+  <a href="#B">B</a>
+  <a href="#C">C</a>
+  <a href="#D">D</a>
+  <a href="#E">E</a>
+  <a href="#F">F</a>
+  <a href="#G">G</a>
+  <a href="#H">H</a>
+  <a href="#I">I</a>
+  <a href="#J">J</a>
+  <a href="#K">K</a>
+  <a href="#L">L</a>
+  <a href="#M">M</a>
+  <a href="#N">N</a>
+  <a href="#O">O</a>
+  <a href="#P">P</a>
+  <a href="#Q">Q</a>
+  <a href="#R">R</a>
+  <a href="#S">S</a>
+  <a href="#T">T</a>
+  <a href="#U">U</a>
+  <a href="#V">V</a>
+  <a href="#W">W</a>
+  <a href="#X">X</a>
+  <a href="#Y">Y</a>
+  <a href="#Z">Z</a>
+
+<!-- Placeholder for the keyword index - this variable is REQUIRED! -->
+<script type="text/javascript">
+
+  function hmInitHideLinks(cssCode) {
+  	var styleElement = document.createElement("style");
+  	styleElement.type = "text/css";
+  	if (styleElement.styleSheet) {
+    	styleElement.styleSheet.cssText = cssCode;
+  	}
+  	else {
+    	styleElement.appendChild(document.createTextNode(cssCode));
+  	}
+  	document.getElementsByTagName("head")[0].appendChild(styleElement);
+  }
+
+  hmInitHideLinks("#idx div { display: none }");
+
+  var currentdiv = null;
+  var canhidelinks = true;
+
+  function hmshowLinks(divID) {
+    var thisdiv = document.getElementById(divID);
+    canhidelinks = true;
+    hmhideLinks();
+    if (thisdiv) {
+      currentdiv = thisdiv;
+      $(currentdiv).show();
+      $(currentdiv).mouseover(hmdivMouseOver).mouseout(hmdivMouseOut);
+      $(document).mouseup(hmhideLinks);
+    }
+  }
+  function hmdivMouseOver() { canhidelinks = false; };
+  function hmdivMouseOut() { canhidelinks = true; };
+  function hmhideLinks() {
+    if (canhidelinks) {
+      if (currentdiv) {
+        $(currentdiv).hide();
+        $(currentdiv).unbind("onmouseover", "onmouseout");
+      }
+      currentdiv = null;
+      $(document).unbind("onmouseup");
+    }
+  }
+</script>
+<div id="idx" style="margin:0;padding:0;border:none">
+<a name="A" id="A"></a><p class="idxsection">- A -</p>
+<p class="idxkeyword" style="margin:0 0 0 0px"><a href="javascript:void(0)" onclick="return hmshowLinks('k1')"><span class="idxkeyword">Access code</span></a></p>
+<div id="k1" style="position:relative;margin:0 0 0 20px;top:-3px">
+<table class="idxtable" style="padding:4px"><tr><td class="idxtable"><table style="border:none;padding0"><tr style="vertical-align:baseline"><td><img src="ciconidx.gif" style="border:none" alt="Icon"></td><td><a href="bookshelf_2.htm" target="hmcontent"><span class="idxlink">Manage books</span></a></td></tr><tr style="vertical-align:baseline"><td><img src="ciconidx.gif" style="border:none" alt="Icon"></td><td><a href="adding-books.htm" target="hmcontent"><span class="idxlink">Add books</span></a></td></tr></table></td></tr></table>
+</div>
+<p class="idxkeyword" style="margin:0 0 0 0px"><a href="account_details.htm" target="hmcontent"><span class="idxkeyword">Account</span></a></p>
+<p class="idxkeyword" style="margin:0 0 0 0px"><a href="javascript:void(0)" onclick="return hmshowLinks('k3')"><span class="idxkeyword">Add books</span></a></p>
+<div id="k3" style="position:relative;margin:0 0 0 20px;top:-3px">
+<table class="idxtable" style="padding:4px"><tr><td class="idxtable"><table style="border:none;padding0"><tr style="vertical-align:baseline"><td><img src="ciconidx.gif" style="border:none" alt="Icon"></td><td><a href="bookshelf_2.htm" target="hmcontent"><span class="idxlink">Manage books</span></a></td></tr><tr style="vertical-align:baseline"><td><img src="ciconidx.gif" style="border:none" alt="Icon"></td><td><a href="adding-books.htm" target="hmcontent"><span class="idxlink">Add books</span></a></td></tr></table></td></tr></table>
+</div>
+<p class="idxkeyword" style="margin:0 0 0 0px"><a href="updating_the_app.htm" target="hmcontent"><span class="idxkeyword">App</span></a></p>
+<p class="idxkeyword" style="margin:0 0 0 0px"><a href="javascript:void(0)" onclick="return hmshowLinks('k5')"><span class="idxkeyword">Audio</span></a></p>
+<div id="k5" style="position:relative;margin:0 0 0 20px;top:-3px">
+<table class="idxtable" style="padding:4px"><tr><td class="idxtable"><table style="border:none;padding0"><tr style="vertical-align:baseline"><td><img src="ciconidx.gif" style="border:none" alt="Icon"></td><td><a href="cb_using_interactive_content_2.htm" target="hmcontent"><span class="idxlink">Interactive content</span></a></td></tr><tr style="vertical-align:baseline"><td><img src="ciconidx.gif" style="border:none" alt="Icon"></td><td><a href="gr_using_audio_2.htm" target="hmcontent"><span class="idxlink">Audio</span></a></td></tr><tr style="vertical-align:baseline"><td><img src="ciconidx.gif" style="border:none" alt="Icon"></td><td><a href="cpt_using_interactive_content_2.htm" target="hmcontent"><span class="idxlink">Interactive content</span></a></td></tr></table></td></tr></table>
+</div>
+<p class="idxkeyword" style="margin:0 0 0 0px"><a href="gr_using_your_reading_diary_2.htm" target="hmcontent"><span class="idxkeyword">Awards</span></a></p>
+<a name="B" id="B"></a><p class="idxsection">- B -</p>
+<p class="idxkeyword" style="margin:0 0 0 0px"><a href="javascript:void(0)" onclick="return hmshowLinks('k7')"><span class="idxkeyword">Bookmark</span></a></p>
+<div id="k7" style="position:relative;margin:0 0 0 20px;top:-3px">
+<table class="idxtable" style="padding:4px"><tr><td class="idxtable"><table style="border:none;padding0"><tr style="vertical-align:baseline"><td><img src="ciconidx.gif" style="border:none" alt="Icon"></td><td><a href="cb_using_the_toolbar_2_2.htm" target="hmcontent"><span class="idxlink">Toolbar</span></a></td></tr><tr style="vertical-align:baseline"><td><img src="ciconidx.gif" style="border:none" alt="Icon"></td><td><a href="gr_using_the_toolbar_2_2.htm" target="hmcontent"><span class="idxlink">Toolbar</span></a></td></tr><tr style="vertical-align:baseline"><td><img src="ciconidx.gif" style="border:none" alt="Icon"></td><td><a href="cpt_using_the_toolbar_2_2.htm" target="hmcontent"><span class="idxlink">Toolbar</span></a></td></tr></table></td></tr></table>
+</div>
+<p class="idxkeyword" style="margin:0 0 0 0px"><a href="javascript:void(0)" onclick="return hmshowLinks('k8')"><span class="idxkeyword">Buy books</span></a></p>
+<div id="k8" style="position:relative;margin:0 0 0 20px;top:-3px">
+<table class="idxtable" style="padding:4px"><tr><td class="idxtable"><table style="border:none;padding0"><tr style="vertical-align:baseline"><td><img src="ciconidx.gif" style="border:none" alt="Icon"></td><td><a href="bookshelf_2.htm" target="hmcontent"><span class="idxlink">Manage books</span></a></td></tr><tr style="vertical-align:baseline"><td><img src="ciconidx.gif" style="border:none" alt="Icon"></td><td><a href="adding-books.htm" target="hmcontent"><span class="idxlink">Add books</span></a></td></tr></table></td></tr></table>
+</div>
+<a name="C" id="C"></a><p class="idxsection">- C -</p>
+<p class="idxkeyword" style="margin:0 0 0 0px"><a href="javascript:void(0)" onclick="return hmshowLinks('k9')"><span class="idxkeyword">Class</span></a></p>
+<div id="k9" style="position:relative;margin:0 0 0 20px;top:-3px">
+<table class="idxtable" style="padding:4px"><tr><td class="idxtable"><table style="border:none;padding0"><tr style="vertical-align:baseline"><td><img src="ciconidx.gif" style="border:none" alt="Icon"></td><td><a href="cpt_2.htm" target="hmcontent"><span class="idxlink">Classroom Presentation Tools</span></a></td></tr><tr style="vertical-align:baseline"><td><img src="ciconidx.gif" style="border:none" alt="Icon"></td><td><a href="cpt_using_interactive_content_2.htm" target="hmcontent"><span class="idxlink">Interactive content</span></a></td></tr></table></td></tr></table>
+</div>
+<p class="idxkeyword" style="margin:0 0 0 0px"><a href="using_graded_readers_2.htm" target="hmcontent"><span class="idxkeyword">Classic Tales</span></a></p>
+<p class="idxkeyword" style="margin:0 0 0 0px"><a href="javascript:void(0)" onclick="return hmshowLinks('k11')"><span class="idxkeyword">Classroom Presentation Tools</span></a></p>
+<div id="k11" style="position:relative;margin:0 0 0 20px;top:-3px">
+<table class="idxtable" style="padding:4px"><tr><td class="idxtable"><table style="border:none;padding0"><tr style="vertical-align:baseline"><td><img src="ciconidx.gif" style="border:none" alt="Icon"></td><td><a href="cpt_2.htm" target="hmcontent"><span class="idxlink">Classroom Presentation Tools</span></a></td></tr><tr style="vertical-align:baseline"><td><img src="ciconidx.gif" style="border:none" alt="Icon"></td><td><a href="cpt_using_interactive_content_2.htm" target="hmcontent"><span class="idxlink">Interactive content</span></a></td></tr></table></td></tr></table>
+</div>
+<p class="idxkeyword" style="margin:0 0 0 0px"><a href="cpt_using_the_toolbar_2_2.htm#clear-page" target="hmcontent"><span class="idxkeyword">clear delete remove page notes highlights pen</span></a></p>
+<p class="idxkeyword" style="margin:0 0 0 0px"><a href="javascript:void(0)" onclick="return hmshowLinks('k13')"><span class="idxkeyword">Cloud</span></a></p>
+<div id="k13" style="position:relative;margin:0 0 0 20px;top:-3px">
+<table class="idxtable" style="padding:4px"><tr><td class="idxtable"><table style="border:none;padding0"><tr style="vertical-align:baseline"><td><img src="ciconidx.gif" style="border:none" alt="Icon"></td><td><a href="using_coursebooks_2.htm" target="hmcontent"><span class="idxlink">Coursebooks</span></a></td></tr><tr style="vertical-align:baseline"><td><img src="ciconidx.gif" style="border:none" alt="Icon"></td><td><a href="using_graded_readers_2.htm" target="hmcontent"><span class="idxlink">Graded Readers</span></a></td></tr><tr style="vertical-align:baseline"><td><img src="ciconidx.gif" style="border:none" alt="Icon"></td><td><a href="cpt_2.htm" target="hmcontent"><span class="idxlink">Classroom Presentation Tools</span></a></td></tr></table></td></tr></table>
+</div>
+<p class="idxkeyword" style="margin:0 0 0 0px"><a href="javascript:void(0)" onclick="return hmshowLinks('k14')"><span class="idxkeyword">Contact us</span></a></p>
+<div id="k14" style="position:relative;margin:0 0 0 20px;top:-3px">
+<table class="idxtable" style="padding:4px"><tr><td class="idxtable"><table style="border:none;padding0"><tr style="vertical-align:baseline"><td><img src="ciconidx.gif" style="border:none" alt="Icon"></td><td><a href="using_e-books_on_a_shared_comp_2.htm" target="hmcontent"><span class="idxlink">Shared computers</span></a></td></tr><tr style="vertical-align:baseline"><td><img src="ciconidx.gif" style="border:none" alt="Icon"></td><td><a href="contact_us_2.htm" target="hmcontent"><span class="idxlink">Contact us</span></a></td></tr></table></td></tr></table>
+</div>
+<p class="idxkeyword" style="margin:0 0 0 0px"><a href="javascript:void(0)" onclick="return hmshowLinks('k15')"><span class="idxkeyword">Coursebooks</span></a></p>
+<div id="k15" style="position:relative;margin:0 0 0 20px;top:-3px">
+<table class="idxtable" style="padding:4px"><tr><td class="idxtable"><table style="border:none;padding0"><tr style="vertical-align:baseline"><td><img src="ciconidx.gif" style="border:none" alt="Icon"></td><td><a href="using_coursebooks_2.htm" target="hmcontent"><span class="idxlink">Coursebooks</span></a></td></tr><tr style="vertical-align:baseline"><td><img src="ciconidx.gif" style="border:none" alt="Icon"></td><td><a href="cb_using_interactive_content_2.htm" target="hmcontent"><span class="idxlink">Interactive content</span></a></td></tr><tr style="vertical-align:baseline"><td><img src="ciconidx.gif" style="border:none" alt="Icon"></td><td><a href="cb_using_the_toolbar_2_2.htm" target="hmcontent"><span class="idxlink">Toolbar</span></a></td></tr><tr style="vertical-align:baseline"><td><img src="ciconidx.gif" style="border:none" alt="Icon"></td><td><a href="gr_using_the_toolbar_2_2.htm" target="hmcontent"><span class="idxlink">Toolbar</span></a></td></tr><tr style="vertical-align:baseline"><td><img src="ciconidx.gif" style="border:none" alt="Icon"></td><td><a href="cpt_using_the_toolbar_2_2.htm" target="hmcontent"><span class="idxlink">Toolbar</span></a></td></tr></table></td></tr></table>
+</div>
+<p class="idxkeyword" style="margin:0 0 0 0px"><a href="contact_us_2.htm" target="hmcontent"><span class="idxkeyword">Customer Support</span></a></p>
+<a name="D" id="D"></a><p class="idxsection">- D -</p>
+<p class="idxkeyword" style="margin:0 0 0 0px"><a href="using_graded_readers_2.htm" target="hmcontent"><span class="idxkeyword">Dominoes</span></a></p>
+<p class="idxkeyword" style="margin:0 0 0 0px"><a href="adding-books.htm" target="hmcontent"><span class="idxkeyword">Download</span></a></p>
+<p class="idxkeyword" style="margin:0 0 0 0px"><a href="system_requirements_2.htm" target="hmcontent"><span class="idxkeyword">Download the desktop app</span></a></p>
+<a name="E" id="E"></a><p class="idxsection">- E -</p>
+<p class="idxkeyword" style="margin:0 0 0 0px"><a href="javascript:void(0)" onclick="return hmshowLinks('k20')"><span class="idxkeyword">Exercises</span></a></p>
+<div id="k20" style="position:relative;margin:0 0 0 20px;top:-3px">
+<table class="idxtable" style="padding:4px"><tr><td class="idxtable"><table style="border:none;padding0"><tr style="vertical-align:baseline"><td><img src="ciconidx.gif" style="border:none" alt="Icon"></td><td><a href="cb_using_interactive_content_2.htm" target="hmcontent"><span class="idxlink">Interactive content</span></a></td></tr><tr style="vertical-align:baseline"><td><img src="ciconidx.gif" style="border:none" alt="Icon"></td><td><a href="gr_using_audio_2.htm" target="hmcontent"><span class="idxlink">Audio</span></a></td></tr><tr style="vertical-align:baseline"><td><img src="ciconidx.gif" style="border:none" alt="Icon"></td><td><a href="cpt_using_interactive_content_2.htm" target="hmcontent"><span class="idxlink">Interactive content</span></a></td></tr></table></td></tr></table>
+</div>
+<a name="F" id="F"></a><p class="idxsection">- F -</p>
+<p class="idxkeyword" style="margin:0 0 0 0px"><a href="bookshelf_2.htm" target="hmcontent"><span class="idxkeyword">Filter</span></a></p>
+<p class="idxkeyword" style="margin:0 0 0 0px"><a href="javascript:void(0)" onclick="return hmshowLinks('k22')"><span class="idxkeyword">Focus</span></a></p>
+<div id="k22" style="position:relative;margin:0 0 0 20px;top:-3px">
+<table class="idxtable" style="padding:4px"><tr><td class="idxtable"><table style="border:none;padding0"><tr style="vertical-align:baseline"><td><img src="ciconidx.gif" style="border:none" alt="Icon"></td><td><a href="cb_using_the_toolbar_2_2.htm" target="hmcontent"><span class="idxlink">Toolbar</span></a></td></tr><tr style="vertical-align:baseline"><td><img src="ciconidx.gif" style="border:none" alt="Icon"></td><td><a href="gr_using_the_toolbar_2_2.htm" target="hmcontent"><span class="idxlink">Toolbar</span></a></td></tr><tr style="vertical-align:baseline"><td><img src="ciconidx.gif" style="border:none" alt="Icon"></td><td><a href="cpt_using_the_toolbar_2_2.htm" target="hmcontent"><span class="idxlink">Toolbar</span></a></td></tr></table></td></tr></table>
+</div>
+<a name="G" id="G"></a><p class="idxsection">- G -</p>
+<p class="idxkeyword" style="margin:0 0 0 0px"><a href="javascript:void(0)" onclick="return hmshowLinks('k23')"><span class="idxkeyword">Go to page</span></a></p>
+<div id="k23" style="position:relative;margin:0 0 0 20px;top:-3px">
+<table class="idxtable" style="padding:4px"><tr><td class="idxtable"><table style="border:none;padding0"><tr style="vertical-align:baseline"><td><img src="ciconidx.gif" style="border:none" alt="Icon"></td><td><a href="cb_using_the_toolbar_2_2.htm" target="hmcontent"><span class="idxlink">Toolbar</span></a></td></tr><tr style="vertical-align:baseline"><td><img src="ciconidx.gif" style="border:none" alt="Icon"></td><td><a href="gr_using_the_toolbar_2_2.htm" target="hmcontent"><span class="idxlink">Toolbar</span></a></td></tr><tr style="vertical-align:baseline"><td><img src="ciconidx.gif" style="border:none" alt="Icon"></td><td><a href="cpt_using_the_toolbar_2_2.htm" target="hmcontent"><span class="idxlink">Toolbar</span></a></td></tr></table></td></tr></table>
+</div>
+<p class="idxkeyword" style="margin:0 0 0 0px"><a href="system_requirements_2.htm" target="hmcontent"><span class="idxkeyword">Google Play</span></a></p>
+<p class="idxkeyword" style="margin:0 0 0 0px"><a href="javascript:void(0)" onclick="return hmshowLinks('k25')"><span class="idxkeyword">Graded readers</span></a></p>
+<div id="k25" style="position:relative;margin:0 0 0 20px;top:-3px">
+<table class="idxtable" style="padding:4px"><tr><td class="idxtable"><table style="border:none;padding0"><tr style="vertical-align:baseline"><td><img src="ciconidx.gif" style="border:none" alt="Icon"></td><td><a href="using_graded_readers_2.htm" target="hmcontent"><span class="idxlink">Graded Readers</span></a></td></tr><tr style="vertical-align:baseline"><td><img src="ciconidx.gif" style="border:none" alt="Icon"></td><td><a href="gr_using_audio_2.htm" target="hmcontent"><span class="idxlink">Audio</span></a></td></tr></table></td></tr></table>
+</div>
+<a name="H" id="H"></a><p class="idxsection">- H -</p>
+<p class="idxkeyword" style="margin:0 0 0 0px"><a href="contact_us_2.htm" target="hmcontent"><span class="idxkeyword">Help and Support</span></a></p>
+<p class="idxkeyword" style="margin:0 0 0 0px"><a href="using_e-books_on_a_shared_comp_2.htm" target="hmcontent"><span class="idxkeyword">here</span></a></p>
+<p class="idxkeyword" style="margin:0 0 0 0px"><a href="bookshelf_2.htm" target="hmcontent"><span class="idxkeyword">Hide</span></a></p>
+<p class="idxkeyword" style="margin:0 0 0 0px"><a href="cpt_using_the_toolbar_2_2.htm#hide-and-show" target="hmcontent"><span class="idxkeyword">hide reveal show shapes</span></a></p>
+<p class="idxkeyword" style="margin:0 0 0 0px"><a href="javascript:void(0)" onclick="return hmshowLinks('k30')"><span class="idxkeyword">Highlighters</span></a></p>
+<div id="k30" style="position:relative;margin:0 0 0 20px;top:-3px">
+<table class="idxtable" style="padding:4px"><tr><td class="idxtable"><table style="border:none;padding0"><tr style="vertical-align:baseline"><td><img src="ciconidx.gif" style="border:none" alt="Icon"></td><td><a href="cb_using_the_toolbar_2_2.htm" target="hmcontent"><span class="idxlink">Toolbar</span></a></td></tr><tr style="vertical-align:baseline"><td><img src="ciconidx.gif" style="border:none" alt="Icon"></td><td><a href="gr_using_the_toolbar_2_2.htm" target="hmcontent"><span class="idxlink">Toolbar</span></a></td></tr><tr style="vertical-align:baseline"><td><img src="ciconidx.gif" style="border:none" alt="Icon"></td><td><a href="cpt_using_the_toolbar_2_2.htm" target="hmcontent"><span class="idxlink">Toolbar</span></a></td></tr></table></td></tr></table>
+</div>
+<a name="L" id="L"></a><p class="idxsection">- L -</p>
+<p class="idxkeyword" style="margin:0 0 0 0px"><a href="log_in_2.htm" target="hmcontent"><span class="idxkeyword">Log in</span></a></p>
+<p class="idxkeyword" style="margin:0 0 0 0px"><a href="log_in_2.htm" target="hmcontent"><span class="idxkeyword">Logging in</span></a></p>
+<a name="M" id="M"></a><p class="idxsection">- M -</p>
+<p class="idxkeyword" style="margin:0 0 0 0px"><a href="javascript:void(0)" onclick="return hmshowLinks('k33')"><span class="idxkeyword">Marking</span></a></p>
+<div id="k33" style="position:relative;margin:0 0 0 20px;top:-3px">
+<table class="idxtable" style="padding:4px"><tr><td class="idxtable"><table style="border:none;padding0"><tr style="vertical-align:baseline"><td><img src="ciconidx.gif" style="border:none" alt="Icon"></td><td><a href="cb_using_the_toolbar_2_2.htm" target="hmcontent"><span class="idxlink">Toolbar</span></a></td></tr><tr style="vertical-align:baseline"><td><img src="ciconidx.gif" style="border:none" alt="Icon"></td><td><a href="gr_using_the_toolbar_2_2.htm" target="hmcontent"><span class="idxlink">Toolbar</span></a></td></tr><tr style="vertical-align:baseline"><td><img src="ciconidx.gif" style="border:none" alt="Icon"></td><td><a href="cpt_using_the_toolbar_2_2.htm" target="hmcontent"><span class="idxlink">Toolbar</span></a></td></tr></table></td></tr></table>
+</div>
+<p class="idxkeyword" style="margin:0 0 0 0px"><a href="javascript:void(0)" onclick="return hmshowLinks('k34')"><span class="idxkeyword">Menu</span></a></p>
+<div id="k34" style="position:relative;margin:0 0 0 20px;top:-3px">
+<table class="idxtable" style="padding:4px"><tr><td class="idxtable"><table style="border:none;padding0"><tr style="vertical-align:baseline"><td><img src="ciconidx.gif" style="border:none" alt="Icon"></td><td><a href="cb_using_the_toolbar_2_2.htm" target="hmcontent"><span class="idxlink">Toolbar</span></a></td></tr><tr style="vertical-align:baseline"><td><img src="ciconidx.gif" style="border:none" alt="Icon"></td><td><a href="gr_using_the_toolbar_2_2.htm" target="hmcontent"><span class="idxlink">Toolbar</span></a></td></tr><tr style="vertical-align:baseline"><td><img src="ciconidx.gif" style="border:none" alt="Icon"></td><td><a href="cpt_using_the_toolbar_2_2.htm" target="hmcontent"><span class="idxlink">Toolbar</span></a></td></tr></table></td></tr></table>
+</div>
+<p class="idxkeyword" style="margin:0 0 0 0px"><a href="javascript:void(0)" onclick="return hmshowLinks('k35')"><span class="idxkeyword">Move</span></a></p>
+<div id="k35" style="position:relative;margin:0 0 0 20px;top:-3px">
+<table class="idxtable" style="padding:4px"><tr><td class="idxtable"><table style="border:none;padding0"><tr style="vertical-align:baseline"><td><img src="ciconidx.gif" style="border:none" alt="Icon"></td><td><a href="cb_using_the_toolbar_2_2.htm" target="hmcontent"><span class="idxlink">Toolbar</span></a></td></tr><tr style="vertical-align:baseline"><td><img src="ciconidx.gif" style="border:none" alt="Icon"></td><td><a href="gr_using_the_toolbar_2_2.htm" target="hmcontent"><span class="idxlink">Toolbar</span></a></td></tr><tr style="vertical-align:baseline"><td><img src="ciconidx.gif" style="border:none" alt="Icon"></td><td><a href="cpt_using_the_toolbar_2_2.htm" target="hmcontent"><span class="idxlink">Toolbar</span></a></td></tr></table></td></tr></table>
+</div>
+<p class="idxkeyword" style="margin:0 0 0 0px"><a href="using_coursebooks_2.htm" target="hmcontent"><span class="idxkeyword">My books</span></a></p>
+<p class="idxkeyword" style="margin:0 0 0 0px"><a href="account_details.htm" target="hmcontent"><span class="idxkeyword">My details</span></a></p>
+<a name="N" id="N"></a><p class="idxsection">- N -</p>
+<p class="idxkeyword" style="margin:0 0 0 0px"><a href="gr_using_your_reading_diary_2.htm" target="hmcontent"><span class="idxkeyword">Number of words</span></a></p>
+<a name="O" id="O"></a><p class="idxsection">- O -</p>
+<p class="idxkeyword" style="margin:0 0 0 0px"><a href="acknowledgments.htm" target="hmcontent"><span class="idxkeyword">open source software providers</span></a></p>
+<p class="idxkeyword" style="margin:0 0 0 0px"><a href="bookshelf_2.htm" target="hmcontent"><span class="idxkeyword">Organise</span></a></p>
+<p class="idxkeyword" style="margin:0 0 0 0px"><a href="bookshelf_2.htm" target="hmcontent"><span class="idxkeyword">Organize</span></a></p>
+<p class="idxkeyword" style="margin:0 0 0 0px"><a href="using_graded_readers_2.htm" target="hmcontent"><span class="idxkeyword">Oxford Bookworms</span></a></p>
+<p class="idxkeyword" style="margin:0 0 0 0px"><a href="javascript:void(0)" onclick="return hmshowLinks('k43')"><span class="idxkeyword">Oxford English Hub</span></a></p>
+<div id="k43" style="position:relative;margin:0 0 0 20px;top:-3px">
+<table class="idxtable" style="padding:4px"><tr><td class="idxtable"><table style="border:none;padding0"><tr style="vertical-align:baseline"><td><img src="ciconidx.gif" style="border:none" alt="Icon"></td><td><a href="assign-course-materials.htm" target="hmcontent"><span class="idxlink">Assign course materials</span></a></td></tr><tr style="vertical-align:baseline"><td><img src="ciconidx.gif" style="border:none" alt="Icon"></td><td><a href="class-codes.htm" target="hmcontent"><span class="idxlink">Create class codes</span></a></td></tr></table></td></tr></table>
+</div>
+<p class="idxkeyword" style="margin:0 0 0 0px"><a href="using_graded_readers_2.htm" target="hmcontent"><span class="idxkeyword">Oxford Read and Discover</span></a></p>
+<p class="idxkeyword" style="margin:0 0 0 0px"><a href="using_graded_readers_2.htm" target="hmcontent"><span class="idxkeyword">Oxford Read and Imagine</span></a></p>
+<p class="idxkeyword" style="margin:0 0 0 0px"><a href="class-codes.htm" target="hmcontent"><span class="idxkeyword">oxfordenglishhub.com</span></a></p>
+<a name="P" id="P"></a><p class="idxsection">- P -</p>
+<p class="idxkeyword" style="margin:0 0 0 0px"><a href="javascript:void(0)" onclick="return hmshowLinks('k47')"><span class="idxkeyword">Pens</span></a></p>
+<div id="k47" style="position:relative;margin:0 0 0 20px;top:-3px">
+<table class="idxtable" style="padding:4px"><tr><td class="idxtable"><table style="border:none;padding0"><tr style="vertical-align:baseline"><td><img src="ciconidx.gif" style="border:none" alt="Icon"></td><td><a href="cb_using_the_toolbar_2_2.htm" target="hmcontent"><span class="idxlink">Toolbar</span></a></td></tr><tr style="vertical-align:baseline"><td><img src="ciconidx.gif" style="border:none" alt="Icon"></td><td><a href="gr_using_the_toolbar_2_2.htm" target="hmcontent"><span class="idxlink">Toolbar</span></a></td></tr><tr style="vertical-align:baseline"><td><img src="ciconidx.gif" style="border:none" alt="Icon"></td><td><a href="cpt_using_the_toolbar_2_2.htm" target="hmcontent"><span class="idxlink">Toolbar</span></a></td></tr></table></td></tr></table>
+</div>
+<p class="idxkeyword" style="margin:0 0 0 0px"><a href="javascript:void(0)" onclick="return hmshowLinks('k48')"><span class="idxkeyword">Pronuncation practice</span></a></p>
+<div id="k48" style="position:relative;margin:0 0 0 20px;top:-3px">
+<table class="idxtable" style="padding:4px"><tr><td class="idxtable"><table style="border:none;padding0"><tr style="vertical-align:baseline"><td><img src="ciconidx.gif" style="border:none" alt="Icon"></td><td><a href="cb_using_interactive_content_2.htm" target="hmcontent"><span class="idxlink">Interactive content</span></a></td></tr><tr style="vertical-align:baseline"><td><img src="ciconidx.gif" style="border:none" alt="Icon"></td><td><a href="gr_using_audio_2.htm" target="hmcontent"><span class="idxlink">Audio</span></a></td></tr><tr style="vertical-align:baseline"><td><img src="ciconidx.gif" style="border:none" alt="Icon"></td><td><a href="cpt_using_interactive_content_2.htm" target="hmcontent"><span class="idxlink">Interactive content</span></a></td></tr></table></td></tr></table>
+</div>
+<a name="R" id="R"></a><p class="idxsection">- R -</p>
+<p class="idxkeyword" style="margin:0 0 0 0px"><a href="gr_using_your_reading_diary_2.htm" target="hmcontent"><span class="idxkeyword">Reading diary</span></a></p>
+<p class="idxkeyword" style="margin:0 0 0 0px"><a href="gr_using_your_reading_diary_2.htm" target="hmcontent"><span class="idxkeyword">Reading progress</span></a></p>
+<p class="idxkeyword" style="margin:0 0 0 0px"><a href="home.htm" target="hmcontent"><span class="idxkeyword">Register</span></a></p>
+<p class="idxkeyword" style="margin:0 0 0 0px"><a href="home.htm" target="hmcontent"><span class="idxkeyword">Registration</span></a></p>
+<a name="S" id="S"></a><p class="idxsection">- S -</p>
+<p class="idxkeyword" style="margin:0 0 0 0px"><a href="javascript:void(0)" onclick="return hmshowLinks('k53')"><span class="idxkeyword">Search</span></a></p>
+<div id="k53" style="position:relative;margin:0 0 0 20px;top:-3px">
+<table class="idxtable" style="padding:4px"><tr><td class="idxtable"><table style="border:none;padding0"><tr style="vertical-align:baseline"><td><img src="ciconidx.gif" style="border:none" alt="Icon"></td><td><a href="cb_using_the_toolbar_2_2.htm" target="hmcontent"><span class="idxlink">Toolbar</span></a></td></tr><tr style="vertical-align:baseline"><td><img src="ciconidx.gif" style="border:none" alt="Icon"></td><td><a href="gr_using_the_toolbar_2_2.htm" target="hmcontent"><span class="idxlink">Toolbar</span></a></td></tr><tr style="vertical-align:baseline"><td><img src="ciconidx.gif" style="border:none" alt="Icon"></td><td><a href="cpt_using_the_toolbar_2_2.htm" target="hmcontent"><span class="idxlink">Toolbar</span></a></td></tr></table></td></tr></table>
+</div>
+<p class="idxkeyword" style="margin:0 0 0 0px"><a href="working-remotely.htm" target="hmcontent"><span class="idxkeyword">Share Motion and Video Content in Cisco Webex Meetings</span></a></p>
+<p class="idxkeyword" style="margin:0 0 0 0px"><a href="bookshelf_2.htm" target="hmcontent"><span class="idxkeyword">Show</span></a></p>
+<p class="idxkeyword" style="margin:0 0 0 0px"><a href="system_requirements_2.htm" target="hmcontent"><span class="idxkeyword">System requirements</span></a></p>
+<a name="T" id="T"></a><p class="idxsection">- T -</p>
+<p class="idxkeyword" style="margin:0 0 0 0px"><a href="bookshelf_2.htm" target="hmcontent"><span class="idxkeyword">Tidy books</span></a></p>
+<p class="idxkeyword" style="margin:0 0 0 0px"><a href="gr_using_your_reading_diary_2.htm" target="hmcontent"><span class="idxkeyword">Time spent reading</span></a></p>
+<p class="idxkeyword" style="margin:0 0 0 0px"><a href="javascript:void(0)" onclick="return hmshowLinks('k59')"><span class="idxkeyword">Toolbar</span></a></p>
+<div id="k59" style="position:relative;margin:0 0 0 20px;top:-3px">
+<table class="idxtable" style="padding:4px"><tr><td class="idxtable"><table style="border:none;padding0"><tr style="vertical-align:baseline"><td><img src="ciconidx.gif" style="border:none" alt="Icon"></td><td><a href="cb_using_the_toolbar_2_2.htm" target="hmcontent"><span class="idxlink">Toolbar</span></a></td></tr><tr style="vertical-align:baseline"><td><img src="ciconidx.gif" style="border:none" alt="Icon"></td><td><a href="gr_using_the_toolbar_2_2.htm" target="hmcontent"><span class="idxlink">Toolbar</span></a></td></tr><tr style="vertical-align:baseline"><td><img src="ciconidx.gif" style="border:none" alt="Icon"></td><td><a href="cpt_using_the_toolbar_2_2.htm" target="hmcontent"><span class="idxlink">Toolbar</span></a></td></tr></table></td></tr></table>
+</div>
+<a name="U" id="U"></a><p class="idxsection">- U -</p>
+<p class="idxkeyword" style="margin:0 0 0 0px"><a href="bookshelf_2.htm" target="hmcontent"><span class="idxkeyword">Update books</span></a></p>
+<p class="idxkeyword" style="margin:0 0 0 0px"><a href="updating_the_app.htm" target="hmcontent"><span class="idxkeyword">Updates</span></a></p>
+<a name="V" id="V"></a><p class="idxsection">- V -</p>
+<p class="idxkeyword" style="margin:0 0 0 0px"><a href="javascript:void(0)" onclick="return hmshowLinks('k62')"><span class="idxkeyword">Video</span></a></p>
+<div id="k62" style="position:relative;margin:0 0 0 20px;top:-3px">
+<table class="idxtable" style="padding:4px"><tr><td class="idxtable"><table style="border:none;padding0"><tr style="vertical-align:baseline"><td><img src="ciconidx.gif" style="border:none" alt="Icon"></td><td><a href="cb_using_interactive_content_2.htm" target="hmcontent"><span class="idxlink">Interactive content</span></a></td></tr><tr style="vertical-align:baseline"><td><img src="ciconidx.gif" style="border:none" alt="Icon"></td><td><a href="gr_using_audio_2.htm" target="hmcontent"><span class="idxlink">Audio</span></a></td></tr><tr style="vertical-align:baseline"><td><img src="ciconidx.gif" style="border:none" alt="Icon"></td><td><a href="cpt_using_interactive_content_2.htm" target="hmcontent"><span class="idxlink">Interactive content</span></a></td></tr></table></td></tr></table>
+</div>
+<p class="idxkeyword" style="margin:0 0 0 0px"><a href="javascript:void(0)" onclick="return hmshowLinks('k63')"><span class="idxkeyword">View</span></a></p>
+<div id="k63" style="position:relative;margin:0 0 0 20px;top:-3px">
+<table class="idxtable" style="padding:4px"><tr><td class="idxtable"><table style="border:none;padding0"><tr style="vertical-align:baseline"><td><img src="ciconidx.gif" style="border:none" alt="Icon"></td><td><a href="cb_using_the_toolbar_2_2.htm" target="hmcontent"><span class="idxlink">Toolbar</span></a></td></tr><tr style="vertical-align:baseline"><td><img src="ciconidx.gif" style="border:none" alt="Icon"></td><td><a href="gr_using_the_toolbar_2_2.htm" target="hmcontent"><span class="idxlink">Toolbar</span></a></td></tr><tr style="vertical-align:baseline"><td><img src="ciconidx.gif" style="border:none" alt="Icon"></td><td><a href="cpt_using_the_toolbar_2_2.htm" target="hmcontent"><span class="idxlink">Toolbar</span></a></td></tr></table></td></tr></table>
+</div>
+<a name="W" id="W"></a><p class="idxsection">- W -</p>
+<p class="idxkeyword" style="margin:0 0 0 0px"><a href="assigning_homework_2.htm" target="hmcontent"><span class="idxkeyword">Watch our YouTube video on assigning homework</span></a></p>
+<a name="Z" id="Z"></a><p class="idxsection">- Z -</p>
+<p class="idxkeyword" style="margin:0 0 0 0px"><a href="javascript:void(0)" onclick="return hmshowLinks('k65')"><span class="idxkeyword">Zoom</span></a></p>
+<div id="k65" style="position:relative;margin:0 0 0 20px;top:-3px">
+<table class="idxtable" style="padding:4px"><tr><td class="idxtable"><table style="border:none;padding0"><tr style="vertical-align:baseline"><td><img src="ciconidx.gif" style="border:none" alt="Icon"></td><td><a href="cb_using_the_toolbar_2_2.htm" target="hmcontent"><span class="idxlink">Toolbar</span></a></td></tr><tr style="vertical-align:baseline"><td><img src="ciconidx.gif" style="border:none" alt="Icon"></td><td><a href="gr_using_the_toolbar_2_2.htm" target="hmcontent"><span class="idxlink">Toolbar</span></a></td></tr><tr style="vertical-align:baseline"><td><img src="ciconidx.gif" style="border:none" alt="Icon"></td><td><a href="cpt_using_the_toolbar_2_2.htm" target="hmcontent"><span class="idxlink">Toolbar</span></a></td></tr></table></td></tr></table>
+</div>
+</div>
+
+<script type="text/javascript">
+document.getElementById("navsearch").style.display="inline";
+</script> 
+</body>
+</html>
+
+
+
+
+
+
+
+

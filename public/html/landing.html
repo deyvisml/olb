@@ -1,0 +1,92 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN""http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html lang="en">
+<meta http-equiv="Content-Type" content="text/html;charset=utf-8"/>
+<head>
+  <title>Oxford Learner's Bookshelf</title>
+  <link rel="shortcut icon" href="../images/ods/olb-favicon.ico"/>
+  <link rel="icon" sizes="16x16 32x32 64x64" href="../images/ods/olb-favicon.ico"/>
+  <link rel="stylesheet" type="text/css" href="../css/component/oup-hub.css"/>
+  <link rel="stylesheet" type="text/css" href="../css/lib/bootstrap.min.css"/>
+  <link rel="stylesheet" type="text/css" href="../css/lib/ces.css"/>
+  <link rel="stylesheet" type="text/css" href="../css/ods/commons.css"/>
+  <link rel="stylesheet" type="text/css" href="../css/ods/landing.css"/>
+</head>
+<body>
+<div class="olb-modal-bg"></div>
+<div id="modal" class="modal fade in" tabindex="-1" role="dialog" style="display: none;">
+</div>
+<div id="loading-background">
+  <div class="form-validation-loading validation-loading-lg"></div>
+</div>
+<a href="#" class="sr-only sr-only-focusable">Skip to main content</a>
+<nav class="navbar navbar-default navbar-olb-4 navbar-fixed-top">
+  <div class="header-wrapper">
+    <div class="container">
+      <div class="navbar-header">
+        <a class="navbar-brand" href="#" title="Oxford University Press Home">
+          <img class="oup-branding" src="../images/logos/oup-logo-white.svg" alt="Oxford University Press"/>
+        </a>
+      </div>
+    </div>
+  </div>
+</nav>
+
+<modal-placeholder></modal-placeholder>
+
+<form id="olb-user-form" method="post" action="#">
+  <input type="hidden" id="accessKey" name="accessKey" value=""/>
+  <input type="hidden" id="secretKey" name="secretKey" value=""/>
+  <input type="hidden" id="sessionToken" name="sessionToken" value=""/>
+  <input type="hidden" id="userId" name="userId" value=""/>
+</form>
+
+<div id="content" class="side-collapse-container out">
+
+  <div id="masthead" class="olb-background-image">
+    <div class="masthead-background">
+      <div class="container">
+        <div class="row banner-content">
+          <div class="col-sm-12 col-ces-panel-header">
+            <div class="olb-homepage-title">
+              <h1 class="display-heading">Teach and learn English</h1>
+              <p class="lead">With interactive e-Books from Oxford</p>
+            </div>
+            <div class="img-header-float olb-img-header-float" title="Student with a tablet in a library">
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Content Section -->
+  <div class="homepage-section olb-homepage-section2">
+    <div class="homepage-content feature-sections">
+      <button type="button" class="oup-hub-filled-button medium wide" onClick="showRegisterForm();">Register</button>
+
+      <button type="button" class="oup-hub-filled-button medium wide margin-top" onClick="signin();">Sign in</button>
+
+      <button type="button" class="oup-hub-transparent-button medium icon help margin-top" onClick="help();">Help and Support</button>
+    </div>
+  </div>
+
+</div><!-- End page content -->
+
+<footer class="footer side-collapse-container">
+  <footer-guide-links></footer-guide-links>
+  <footer-privacy-toc></footer-privacy-toc>
+</footer>
+</body>
+<script type="text/javascript" src="component/modal-placeholder.js"></script>
+<script type="text/javascript" src="component/footer-guide-links.js"></script>
+<script type="text/javascript" src="component/footer-privacy-toc.js"></script>
+<script>
+  const ga = require('../js/ods-renderer/utils/google-analytics');
+
+  ga.screen(ga.SCREEN.LANDING);
+</script>
+<script>
+  require('../js/ods-renderer/commons');
+  require('../js/ods-renderer/landing');
+</script>
+</html>

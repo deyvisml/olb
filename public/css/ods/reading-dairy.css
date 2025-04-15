@@ -1,0 +1,405 @@
+/* footer */
+.footer {
+    position: fixed;
+    font-size: 14px;
+    bottom: 0;
+    width: 100%;
+    height: 51px;
+    background-color: #333; }
+
+/* medal - galaxy routing */
+.olb-diary-splash-1 {
+    text-align: center;
+    float: left;
+    height: 100%;
+    overflow: auto;
+}
+.olb-diary-splash-2 {
+    position: relative;
+    height: 100%;
+}
+.olb-diary-splash-2 img {
+    width: 100%;
+    height: auto;
+    display: block;
+}
+
+.olb-diary-arrow {
+    position: absolute;
+    top: 50%;
+    width: 68px;
+    height: 68px;
+    padding: 0;
+    opacity: 1;
+    pointer-events: auto;
+    border-width: 0;
+    transform: translateY(-50%);
+    background-color: transparent;
+    outline: none;
+}
+.olb-diary-arrow:focus-visible {
+    outline: 2px solid var(--oup-hub-color-primary);
+}
+.olb-diary-arrow img {
+    width: 100%;
+    height: auto;
+}
+.olb-diary-arrow.left {
+    left: 2px;
+}
+.olb-diary-arrow.right {
+    right: 2px;
+}
+.olb-diary-arrow.left img {
+    transform: rotate(180deg);
+}
+/* medal - galaxy routing - EOD */
+
+
+/* medal view */
+.olb-diary-splash-1-arrows {
+    margin: 1% auto 1%;
+    width: 97%;
+}
+
+.olb-diary-splash-1-row {
+    display: inline-block;
+    margin: auto;
+}
+.olb-diary-splash-1-row:first-child {
+    margin-top: 25px;
+}
+.olb-diary-splash-1-row:last-child {
+    margin-bottom: 25px;
+}
+
+.olb-diary-splash-1-row img {
+    width: 13%;
+    padding: 1%;
+    opacity: 0.2;
+    -webkit-filter: grayscale(100%);
+    filter: grayscale(100%);
+}
+
+.olb-diary-splash-1-row .olb-diary-splash-complete {
+    opacity: 1;
+    -webkit-filter: grayscale(0%);
+    filter: grayscale(0%);
+}
+/* medal view - EOD */
+
+
+/* galaxy view */
+@keyframes shooting-star-to-left {
+    from {
+        top: -200px;
+        left: 1100px;
+    } to {
+        top: 2000px;
+        left: -5400px;
+    }
+}
+
+@keyframes shooting-star-to-right {
+    from {
+        top: -150px;
+        left: -200px;
+    } to {
+        top: 1200px;
+        left: 6200px;
+    }
+}
+
+.olb-diary-splash-2 .diary-shooting-star {
+    display: none;
+}
+
+.olb-diary-splash-2.is-active .diary-shooting-star {
+    display: inline;
+}
+
+.diary-shooting-star.left {
+    animation-duration: 11s;
+    animation-name: shooting-star-to-left;
+    animation-iteration-count: infinite;
+    animation-timing-function: linear;
+    animation-delay: 6s;
+    transform: rotate(70deg);
+    position: absolute;
+    top: -200px;
+    left: 1100px;
+    width: 7px;
+    height: 271px;
+}
+.diary-shooting-star.right {
+    animation-duration: 9s;
+    animation-name: shooting-star-to-right;
+    animation-iteration-count: infinite;
+    animation-timing-function: linear;
+    animation-delay: 1s;
+    transform: rotate(-79deg);
+    position: absolute;
+    top: -150px;
+    left: -200px;
+    width: 7px;
+    height: 271px;
+}
+
+.olb-stars {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+}
+.olb-stars polygon {
+    fill: #ffffff;
+    opacity: 0.3;
+}
+.olb-stars polygon.olb-diary-splash-complete {
+    fill: #ffb400;
+    opacity: 1;
+}
+/* galaxy view - EOD */
+
+
+/* book list */
+.olb-diary-main-wrap {
+    margin: 40px 0 40px 0;
+    min-width: 600px;
+}
+
+.olb-diary-header {
+    background-color: #a2cccc;
+    margin: 0 36px;
+    padding: 36px 72px;
+    position: relative;
+    text-align: center;
+}
+
+.olb-diary-splash-wrap {
+    min-height: 200px;
+    width: 100%;
+    background-color: #ffffff;
+    overflow: hidden;
+}
+.olb-diary-splash-info-wrap {
+    background: #ffa000;
+    background: -webkit-linear-gradient(top, #ffa000 0%, #ffb400 100%);
+    background: linear-gradient(to bottom, #ffa000 0%, #ffb400 100%);
+    padding: 36px 0;
+    text-align: left;
+}
+.olb-diary-splash-info {
+    width: 49%;
+    padding: 0 36px;
+    display: inline-block;
+    vertical-align: top;
+}
+.olb-diary-splash-info:last-of-type {
+    border-left: 1px solid #ffffff;
+}
+.olb-diary-splash-info h3 {
+    font-size: 24px;
+    margin: 0 0 20px;
+}
+
+.olb-diary-each-number {
+    position: relative;
+    display: inline-block;
+    width: 45px;
+    height: 70px;
+    margin: 0 2px;
+    line-height: 55px;
+    border-radius: 6px;
+    box-shadow: 0 1px 0 1px #ffa000;
+    background-color: #ffffff;
+}
+.olb-diary-each-number p {
+    font-weight: bold;
+    font-size: 43px;
+    width: 100%;
+    height: 100%;
+    margin: 0;
+    padding-top: 18%;
+    text-align: center;
+    position: absolute;
+    z-index: 10;
+}
+.olb-diary-each-number p:before {
+    content: "";
+    width: 100%;
+    height: 50%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    box-shadow: 0 -2px 4px 0 #efefef inset;
+    z-index: -1;
+    border-radius: 6px 6px 0 0;
+}
+
+.olb-diary-each-time p {
+    font-size: 32px;
+    color: #ffffff;
+    font-weight: bold;
+    margin: -4px 0 -2px;
+}
+.olb-diary-timer-img {
+    height: 71px;
+    width: auto;
+    float: left;
+    margin-top: 8px;
+    margin-right: 15px;
+}
+
+.olb-diary-book-slider-wrap {
+    padding: 30px 72px;
+}
+.olb-diary-book-slider {
+    overflow-x: auto;
+    overflow-y: hidden;
+    white-space: nowrap;
+    height: 100%;
+    background-attachment: local;
+    text-align: left;
+}
+
+
+.olb-diary-book-wrap {
+    display: inline-block;
+    background-color: #EFEFEF;
+    color: #666666;
+    padding: 10px 20px;
+    margin-right: 15px;
+    width: 200px;
+    min-height: 360px;
+    white-space: normal;
+    vertical-align: top;
+    position: relative;
+    text-align: left;
+}
+.olb-diary-book-wrap h5 {
+    text-align: left;
+    color: #327f7f;
+    line-height: 17px;
+    margin-bottom: 6px;
+}
+.olb-diary-book-wrap h5 + button {
+    margin-top: 8px;
+}
+.olb-diary-book-wrap:last-child {
+    margin: 0;
+}
+
+
+.olb-diary-book-cover {
+    background-color: #ffffff;
+    padding: 50px 15px 5px;
+    position: relative;
+}
+.olb-diary-book-cover img {
+    height: 170px;
+    width: 130px;
+    color: #ffffff;
+}
+.olb-diary-book-cover object {
+    height: 170px;
+    width: 130px;
+    color: #ffffff;
+}
+.olb-diary-book-cover-finished {
+    background-image: url("../../images/ods/olb-medal.png");
+    background-repeat: no-repeat;
+    background-size: 40px auto;
+    background-position: top right;
+}
+.olb-diary-book-cover-finished .olb-diary-book-text-progress {
+    color: transparent;
+}
+
+
+.olb-diary-book-empty {
+    text-align: center;
+    color: #9e9e9e;
+    font-size: 1.1em;
+    padding-top: 11%;
+}
+.olb-diary-book-empty img {
+    width: 40%;
+}
+.olb-diary-book-empty p {
+    margin-top: 0.5em;
+}
+
+
+.olb-diary-book-info {
+    font-size: 12px;
+    text-align: left;
+}
+.olb-diary-book-info p {
+    margin: 0 10px 0 0;
+    display: inline-block;
+}
+
+
+.olb-diary-progress-bar {
+    background-color: #ffd999;
+    width: 100%;
+    height: 16px;
+    margin-bottom: -16px;
+    position: relative;
+    z-index: 10;
+}
+.olb-diary-progress-bar-inner {
+    background-color: #ffa000;
+    height: 100%;
+}
+.olb-diary-book-text-progress {
+    font-size: 11px;
+    position: absolute;
+    top: 20px;
+    left: 15px;
+}
+
+.olb-diary-divider {
+    height: 2em;
+}
+
+
+.olb-diary-splash {
+    text-align: center;
+    width: 50%;
+}
+.olb-diary-splash-head {
+    margin-top: 0;
+    background: #057775;
+}
+.olb-diary-splash-head:before, .olb-diary-splash-head:after {
+    background-color: #a2cccc;
+}
+/* book list - EOD */
+
+
+/* carousel */
+.carousel {
+    position: relative;
+}
+.carousel-inner {
+    position: relative;
+    overflow: hidden;
+    width: 100%;
+}
+.carousel-item {
+    position: relative;
+    display: none;
+    float: left;
+    width: 100%;
+    margin-right: -100%;
+    backface-visibility: hidden;
+    transition: transform .6s ease-in-out;
+}
+.carousel-inner > .active {
+    background-color: #FFFFFF;
+    left: 0;
+}
+/* carousel - EOD */
